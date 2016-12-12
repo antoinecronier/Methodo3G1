@@ -1,4 +1,4 @@
-package database;
+package database.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import database.DatabaseAccess;
+import database.IGenericDAO;
 import entite.Attribut;
 
 public class AttributDAO implements IGenericDAO<Attribut> {
@@ -100,23 +102,38 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 
 	@Override
 	public void Update(Attribut item) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Attribut Insert(Attribut item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
-			ResultSet resultSet = statement.executeQuery(";");
+			ResultSet resultSet = statement.executeQuery("UPDATE "
+					+ DatabaseAccess.DB + ".Attribut SET "
+					+" att1 = "+ 1 + ","
+					+" att2 = "+ 1 + ""
+					+" WHERE Attribut.id = " + item.getAttribut_id()
+					+";");
 
 			resultSet.close();
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return null;
+	}
+
+	@Override
+	public void Insert(Attribut item) {
+		try {
+			Statement statement = DatabaseAccess.getConnection()
+					.createStatement();
+			ResultSet resultSet = statement.executeQuery("INSERT INTO "
+					+ DatabaseAccess.DB + ".Attribut () VALUES "
+					+"("+ 1 + "," + 2 + ")"+
+					";");
+
+			resultSet.close();
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

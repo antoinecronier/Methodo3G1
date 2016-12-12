@@ -8,5 +8,5 @@ public interface IGenericDAO<T> {
 	public void DeleteAll();
 	public void Delete(Integer id);
 	public void Update(T item);
-	public T Insert(T item);
+	public void Insert(T item);
 }
