@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import database.GenericDAO;
 
-public class Entraineur implements GenericDAO<Entraineur> {
+public class Entraineur {
 
 	private Integer entraineur_id;
 	private String firstname;
@@ -39,41 +39,4 @@ public class Entraineur implements GenericDAO<Entraineur> {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-
-	@Override
-	public Entraineur SelectAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<Entraineur> Select(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void DeleteAll() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Delete(Integer id) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Update(Entraineur item) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Entraineur Insert(Entraineur item) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

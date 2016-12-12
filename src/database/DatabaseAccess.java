@@ -6,25 +6,14 @@ import java.sql.SQLException;
 
 public class DatabaseAccess {
 	private Connection connection = null;
-
-	/** Instance unique pré-initialisée */
-	private static DatabaseAccess INSTANCE = new DatabaseAccess();
-
-	/** Point d'accès pour l'instance unique du singleton */
-	public static DatabaseAccess getInstance()
-	{	return INSTANCE;
-	}
-
-	private DatabaseAccess(){
-
-	}
+	public final static String DB = "Jeu_Foot";
 
 	public Connection getConnection() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			if (connection == null)
 				connection = DriverManager
-						.getConnection("jdbc:mysql://localhost/Jeu_Foot?user=root&password=");
+						.getConnection("jdbc:mysql://localhost/"+this.DB+"?user=root&password=");
 
 		} catch (ClassNotFoundException e) {
 

@@ -1,10 +1,6 @@
 package entite;
 
-import java.util.ArrayList;
-
-import database.GenericDAO;
-
-public class Attribut implements GenericDAO<Attribut> {
+public class Attribut {
 	private Integer attribut_id;
 	private String name;
 	private Integer value;
@@ -38,41 +34,5 @@ public class Attribut implements GenericDAO<Attribut> {
 
 	public void setValue(Integer value) {
 		this.value = value;
-	}
-
-	@Override
-	public Attribut SelectAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<Attribut> Select(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void DeleteAll() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Delete(Integer id) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Update(Attribut item) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Attribut Insert(Attribut item) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
