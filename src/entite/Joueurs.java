@@ -90,4 +90,10 @@ public class Joueurs implements GenericDAO<Joueurs>{
 
 	}
 
+	@Override
+	public Joueurs Insert(Joueurs item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

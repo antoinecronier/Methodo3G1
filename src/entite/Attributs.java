@@ -69,4 +69,10 @@ public class Attributs implements GenericDAO<Attributs> {
 		// TODO Auto-generated method stub
 
 	}
+
+	@Override
+	public Attributs Insert(Attributs item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

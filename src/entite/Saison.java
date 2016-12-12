@@ -59,4 +59,10 @@ public class Saison implements GenericDAO<Saison>{
 		// TODO Auto-generated method stub
 
 	}
+
+	@Override
+	public Saison Insert(Saison item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

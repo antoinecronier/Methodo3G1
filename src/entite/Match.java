@@ -60,6 +60,12 @@ public class Match implements GenericDAO<Match>{
 
 	}
 
+	@Override
+	public Match Insert(Match item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 
 }

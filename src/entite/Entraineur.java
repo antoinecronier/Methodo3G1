@@ -70,4 +70,10 @@ public class Entraineur implements GenericDAO<Entraineur> {
 
 	}
 
+	@Override
+	public Entraineur Insert(Entraineur item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

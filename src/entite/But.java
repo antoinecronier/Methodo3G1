@@ -62,6 +62,12 @@ public class But implements GenericDAO<But>
 		// TODO Auto-generated method stub
 
 	}
+
+	@Override
+	public But Insert(But item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 
 

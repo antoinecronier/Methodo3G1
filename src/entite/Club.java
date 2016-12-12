@@ -70,4 +70,10 @@ public class Club implements GenericDAO<Club> {
 
 	}
 
+	@Override
+	public Club Insert(Club item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
