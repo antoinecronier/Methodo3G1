@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 import database.GenericDAO;
 
-public class Attributs implements GenericDAO<Attributs> {
-	private Integer attributs_id;
+public class Attribut implements GenericDAO<Attribut> {
+	private Integer attribut_id;
 	private String name;
 	private Integer value;
 
-	public Attributs(Integer attributs_id, String name, Integer value){
-		this.attributs_id = attributs_id;
+	public Attribut(Integer attribut_id, String name, Integer value){
+		this.attribut_id = attribut_id;
 		this.name = name;
 		this.value = value;
 
 	}
 
-	public Integer getAttributs_id() {
-		return attributs_id;
+	public Integer getAttribut_id() {
+		return attribut_id;
 	}
 
-	public void setAttributs_id(Integer attributs_id) {
-		this.attributs_id = attributs_id;
+	public void setAttribut_id(Integer attribut_id) {
+		this.attribut_id = attribut_id;
 	}
 
 	public String getName() {
@@ -41,13 +41,13 @@ public class Attributs implements GenericDAO<Attributs> {
 	}
 
 	@Override
-	public Attributs SelectAll() {
+	public Attribut SelectAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ArrayList<Attributs> Select(Integer id) {
+	public ArrayList<Attribut> Select(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -65,13 +65,13 @@ public class Attributs implements GenericDAO<Attributs> {
 	}
 
 	@Override
-	public void Update(Attributs item) {
+	public void Update(Attribut item) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public Attributs Insert(Attributs item) {
+	public Attribut Insert(Attribut item) {
 		// TODO Auto-generated method stub
 		return null;
 	}
