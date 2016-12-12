@@ -1,7 +1,11 @@
 package entite;
 
-public class Joueurs {
-	
+import java.util.ArrayList;
+
+import database.GenericDAO;
+
+public class Joueurs implements GenericDAO<Joueurs>{
+
 	private Integer joueurs_id;
 	private String lastname;
 	private String firstname;
@@ -55,5 +59,35 @@ public class Joueurs {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	
+
+	@Override
+	public Joueurs SelectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Joueurs> Select(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void DeleteAll() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void Delete(Integer id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void Update(Joueurs item) {
+		// TODO Auto-generated method stub
+
+	}
+
 }
