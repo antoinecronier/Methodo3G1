@@ -47,12 +47,11 @@ CREATE TABLE Club(
         id_club      int (11) Auto_increment  NOT NULL ,
         name         Varchar (25) ,
         club_money        Decimal(16,2) ,
-        id_selection Int ,
         PRIMARY KEY (id_club )
 )ENGINE=InnoDB;
 
 
-INSERT INTO Club VALUES (1,'Stade rennais',50000000, 5), (2,'Olympique Lyonnais',170000000, 10);
+#INSERT INTO Club VALUES (1,'Stade rennais',50000000, 5), (2,'Olympique Lyonnais',170000000, 10);
 
 
 
@@ -69,16 +68,16 @@ CREATE TABLE MatchGame(
         PRIMARY KEY (id_match)
 )ENGINE=InnoDB;
 
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (1,"vulputate dui,",1,27,31),(2,"netus et",11,28,36),(3,"Sed congue,",8,22,34),(4,"in, dolor.",13,26,43),(5,"ante blandit",4,24,32),(6,"lacus vestibulum",7,25,31),(7,"arcu. Nunc",7,27,43),(8,"Nunc quis",6,26,43),(9,"egestas. Fusce",12,22,46),(10,"velit justo",9,25,46);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (11,"dui. Fusce",2,27,30),(12,"dui augue",14,24,42),(13,"pede. Nunc",17,27,39),(14,"erat vel",20,28,44),(15,"felis purus",9,26,31),(16,"consectetuer adipiscing",12,21,41),(17,"nunc est,",15,22,37),(18,"faucibus id,",15,21,45),(19,"Phasellus nulla.",11,28,50),(20,"diam lorem,",8,26,31);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (21,"nulla. Integer",15,24,50),(22,"gravida molestie",20,21,45),(23,"elit, pretium",2,27,38),(24,"vitae, orci.",18,28,48),(25,"Integer sem",1,24,32),(26,"ultrices posuere",14,22,33),(27,"faucibus orci",10,28,36),(28,"convallis in,",4,26,43),(29,"augue malesuada",19,28,46),(30,"elementum purus,",18,28,30);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (31,"pede ac",16,28,38),(32,"penatibus et",7,24,43),(33,"mauris sit",6,25,47),(34,"luctus lobortis.",15,28,45),(35,"sapien imperdiet",17,22,33),(36,"lectus quis",6,25,39),(37,"turpis egestas.",13,25,31),(38,"libero. Integer",5,25,40),(39,"Sed nulla",2,24,49),(40,"nisl. Nulla",18,27,40);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (41,"vitae sodales",19,22,39),(42,"magna. Nam",15,25,31),(43,"eu, ligula.",5,27,42),(44,"in faucibus",9,26,38),(45,"ornare. In",6,21,44),(46,"iaculis enim,",4,22,39),(47,"luctus et",5,24,36),(48,"eget massa.",4,27,41),(49,"vestibulum. Mauris",9,27,44),(50,"lacus. Mauris",4,22,33);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (51,"vel arcu",14,26,33),(52,"molestie sodales.",2,26,41),(53,"et magnis",7,23,33),(54,"et, euismod",17,22,36),(55,"ullamcorper magna.",20,28,40),(56,"non justo.",12,24,30),(57,"Sed nunc",13,25,47),(58,"nec, cursus",5,25,42),(59,"nisl. Nulla",1,27,45),(60,"amet risus.",2,27,44);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (61,"sem ut",3,24,31),(62,"nisl. Nulla",6,26,34),(63,"non leo.",8,28,32),(64,"id magna",10,21,44),(65,"urna convallis",17,26,34),(66,"at risus.",18,21,32),(67,"magna a",7,28,35),(68,"cubilia Curae;",8,21,32),(69,"consequat enim",17,21,47),(70,"Donec consectetuer",2,25,47);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (71,"nec ante.",15,28,42),(72,"Sed id",14,25,33),(73,"mi. Duis",4,22,30),(74,"a, scelerisque",13,23,38),(75,"urna suscipit",14,25,47),(76,"amet luctus",17,27,41),(77,"convallis in,",2,25,41),(78,"ac metus",18,24,44),(79,"congue. In",4,24,33),(80,"ligula. Aenean",20,23,45);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (81,"id ante",7,28,32),(82,"ornare lectus",20,24,34),(83,"In ornare",12,27,38),(84,"semper auctor.",8,21,39),(85,"metus facilisis",10,22,37),(86,"sit amet",10,22,44),(87,"eget lacus.",14,23,39),(88,"hendrerit. Donec",10,28,37),(89,"Aenean eget",10,24,32),(90,"dis parturient",9,28,39);
-INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (91,"massa. Integer",15,25,43),(92,"orci luctus",2,25,50),(93,"tellus. Nunc",17,28,47),(94,"Quisque porttitor",9,25,41),(95,"Duis cursus,",19,26,44),(96,"elit. Nulla",13,23,35),(97,"Nullam suscipit,",18,28,45),(98,"lobortis mauris.",8,28,32),(99,"ut eros",20,21,40),(100,"Duis cursus,",9,23,41);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (1,"vulputate dui,",1,27,31),(2,"netus et",11,28,36),(3,"Sed congue,",8,22,34),(4,"in, dolor.",13,26,43),(5,"ante blandit",4,24,32),(6,"lacus vestibulum",7,25,31),(7,"arcu. Nunc",7,27,43),(8,"Nunc quis",6,26,43),(9,"egestas. Fusce",12,22,46),(10,"velit justo",9,25,46);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (11,"dui. Fusce",2,27,30),(12,"dui augue",14,24,42),(13,"pede. Nunc",17,27,39),(14,"erat vel",20,28,44),(15,"felis purus",9,26,31),(16,"consectetuer adipiscing",12,21,41),(17,"nunc est,",15,22,37),(18,"faucibus id,",15,21,45),(19,"Phasellus nulla.",11,28,50),(20,"diam lorem,",8,26,31);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (21,"nulla. Integer",15,24,50),(22,"gravida molestie",20,21,45),(23,"elit, pretium",2,27,38),(24,"vitae, orci.",18,28,48),(25,"Integer sem",1,24,32),(26,"ultrices posuere",14,22,33),(27,"faucibus orci",10,28,36),(28,"convallis in,",4,26,43),(29,"augue malesuada",19,28,46),(30,"elementum purus,",18,28,30);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (31,"pede ac",16,28,38),(32,"penatibus et",7,24,43),(33,"mauris sit",6,25,47),(34,"luctus lobortis.",15,28,45),(35,"sapien imperdiet",17,22,33),(36,"lectus quis",6,25,39),(37,"turpis egestas.",13,25,31),(38,"libero. Integer",5,25,40),(39,"Sed nulla",2,24,49),(40,"nisl. Nulla",18,27,40);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (41,"vitae sodales",19,22,39),(42,"magna. Nam",15,25,31),(43,"eu, ligula.",5,27,42),(44,"in faucibus",9,26,38),(45,"ornare. In",6,21,44),(46,"iaculis enim,",4,22,39),(47,"luctus et",5,24,36),(48,"eget massa.",4,27,41),(49,"vestibulum. Mauris",9,27,44),(50,"lacus. Mauris",4,22,33);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (51,"vel arcu",14,26,33),(52,"molestie sodales.",2,26,41),(53,"et magnis",7,23,33),(54,"et, euismod",17,22,36),(55,"ullamcorper magna.",20,28,40),(56,"non justo.",12,24,30),(57,"Sed nunc",13,25,47),(58,"nec, cursus",5,25,42),(59,"nisl. Nulla",1,27,45),(60,"amet risus.",2,27,44);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (61,"sem ut",3,24,31),(62,"nisl. Nulla",6,26,34),(63,"non leo.",8,28,32),(64,"id magna",10,21,44),(65,"urna convallis",17,26,34),(66,"at risus.",18,21,32),(67,"magna a",7,28,35),(68,"cubilia Curae;",8,21,32),(69,"consequat enim",17,21,47),(70,"Donec consectetuer",2,25,47);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (71,"nec ante.",15,28,42),(72,"Sed id",14,25,33),(73,"mi. Duis",4,22,30),(74,"a, scelerisque",13,23,38),(75,"urna suscipit",14,25,47),(76,"amet luctus",17,27,41),(77,"convallis in,",2,25,41),(78,"ac metus",18,24,44),(79,"congue. In",4,24,33),(80,"ligula. Aenean",20,23,45);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (81,"id ante",7,28,32),(82,"ornare lectus",20,24,34),(83,"In ornare",12,27,38),(84,"semper auctor.",8,21,39),(85,"metus facilisis",10,22,37),(86,"sit amet",10,22,44),(87,"eget lacus.",14,23,39),(88,"hendrerit. Donec",10,28,37),(89,"Aenean eget",10,24,32),(90,"dis parturient",9,28,39);
+#INSERT INTO `MatchGame` (`id_match`,`name_match`,`id_selection_interieur`,`id_saison`,`id_selection_exterieur`) VALUES (91,"massa. Integer",15,25,43),(92,"orci luctus",2,25,50),(93,"tellus. Nunc",17,28,47),(94,"Quisque porttitor",9,25,41),(95,"Duis cursus,",19,26,44),(96,"elit. Nulla",13,23,35),(97,"Nullam suscipit,",18,28,45),(98,"lobortis mauris.",8,28,32),(99,"ut eros",20,21,40),(100,"Duis cursus,",9,23,41);
 
 
 
@@ -181,8 +180,6 @@ CREATE TABLE Faire_parti(
 )ENGINE=InnoDB;
 
 ALTER TABLE Joueur ADD CONSTRAINT FK_Joueur_id_club FOREIGN KEY (id_club) REFERENCES Club(id_club);
-ALTER TABLE Club ADD CONSTRAINT FK_Club_id_selection FOREIGN KEY (id_selection) REFERENCES Selection(id_selection);
-
 ALTER TABLE MatchGame ADD CONSTRAINT FK_Match_id_selection_interieur FOREIGN KEY (id_selection_interieur) REFERENCES Selection(id_selection);
 ALTER TABLE MatchGame ADD CONSTRAINT FK_Match_id_saison FOREIGN KEY (id_saison) REFERENCES Saison(id_saison);
 ALTER TABLE MatchGame ADD CONSTRAINT FK_Match_id_selection_exterieur FOREIGN KEY (id_selection_exterieur) REFERENCES Selection(id_selection);

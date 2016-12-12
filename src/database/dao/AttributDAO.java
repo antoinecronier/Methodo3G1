@@ -13,6 +13,10 @@ import entite.Attribut;
 
 public class AttributDAO implements IGenericDAO<Attribut> {
 
+	public final static String ID = "id_attribut";
+	public final static String NAME = "name_attribut";
+	public final static String TABLE = "Attribut";
+
 	@Override
 	public ArrayList<Attribut> SelectAll() {
 		List<Attribut> attributs = new LinkedList<Attribut>();
@@ -20,16 +24,14 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
-					+ DatabaseAccess.DB + ".Attribut ;");
+					+ DatabaseAccess.DB + "."+TABLE+" ;");
 
 			Attribut attribut = null;
 			while (resultSet.next()) {
 				attribut = new Attribut();
 				attribut.setAttribut_id(Integer.parseInt(resultSet
-						.getString("id_types")));
-				attribut.setName(resultSet.getString("nom"));
-				attribut.setValue(Integer.parseInt(resultSet
-						.getString("id_types")));
+						.getString(ID)));
+				attribut.setName(resultSet.getString(NAME));
 				attributs.add(attribut);
 			}
 			resultSet.close();
@@ -49,15 +51,14 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
-					+ DatabaseAccess.DB + ".Attribut " + "WHERE Attribut. = "
+					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE Attribut. = "
 					+ id + ";");
 
 			resultSet.next();
 
 			attribut.setAttribut_id(Integer.parseInt(resultSet
-					.getString("id_types")));
-			attribut.setName(resultSet.getString("nom"));
-			attribut.setValue(Integer.parseInt(resultSet.getString("id_types")));
+					.getString(ID)));
+			attribut.setName(resultSet.getString(NAME));
 
 			resultSet.close();
 			statement.close();
@@ -75,7 +76,7 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("DELETE FROM "
-					+ DatabaseAccess.DB + ".Attribut;");
+					+ DatabaseAccess.DB + "."+TABLE+";");
 
 			resultSet.close();
 			statement.close();
@@ -90,7 +91,7 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("DELETE FROM "
-					+ DatabaseAccess.DB + ".Attribut WHERE Attribut. = " + id
+					+ DatabaseAccess.DB + ".Attribut WHERE "+TABLE+"."+ID+" = " + id
 					+ " ;");
 
 			resultSet.close();
@@ -106,10 +107,9 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("UPDATE "
-					+ DatabaseAccess.DB + ".Attribut SET "
-					+" att1 = "+ 1 + ","
-					+" att2 = "+ 1 + ""
-					+" WHERE Attribut.id = " + item.getAttribut_id()
+					+ DatabaseAccess.DB + "."+TABLE+" SET "
+					+" "+NAME+" = "+ item.getName() + ""
+					+" WHERE "+TABLE+"."+ID+" = " + item.getAttribut_id()
 					+";");
 
 			resultSet.close();
@@ -125,8 +125,8 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("INSERT INTO "
-					+ DatabaseAccess.DB + ".Attribut () VALUES "
-					+"("+ 1 + "," + 2 + ")"+
+					+ DatabaseAccess.DB + "."+TABLE+" () VALUES "
+					+"(null," + item.getName() + ")"+
 					";");
 
 			resultSet.close();
