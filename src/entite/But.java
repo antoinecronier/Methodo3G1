@@ -3,7 +3,7 @@ package entite;
 import java.sql.Time;
 import java.util.ArrayList;
 
-import database.GenericDAO;
+import database.IGenericDAO;
 
 public class But {
 	private Integer but_id;

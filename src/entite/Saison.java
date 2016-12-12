@@ -2,7 +2,7 @@ package entite;
 
 import java.util.ArrayList;
 
-import database.GenericDAO;
+import database.IGenericDAO;
 
 public class Saison {
 	private Integer saison_id;

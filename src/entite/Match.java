@@ -2,7 +2,7 @@ package entite;
 
 import java.util.ArrayList;
 
-import database.GenericDAO;
+import database.IGenericDAO;
 
 public class Match {
 	private Integer match_id;

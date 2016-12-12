@@ -2,7 +2,7 @@ package database;
 
 import java.util.ArrayList;
 
-public interface GenericDAO<T> {
+public interface IGenericDAO<T> {
 	public ArrayList<T> SelectAll();
 	public T Select(Integer id);
 	public void DeleteAll();

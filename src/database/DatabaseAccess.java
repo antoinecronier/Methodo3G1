@@ -5,15 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseAccess {
-	private Connection connection = null;
+	private static Connection connection = null;
 	public final static String DB = "Jeu_Foot";
 
-	public Connection getConnection() {
+	public static Connection getConnection() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			if (connection == null)
 				connection = DriverManager
-						.getConnection("jdbc:mysql://localhost/"+this.DB+"?user=root&password=");
+						.getConnection("jdbc:mysql://localhost/"+DB+"?user=root&password=");
 
 		} catch (ClassNotFoundException e) {
 
@@ -25,5 +25,15 @@ public class DatabaseAccess {
 
 		}
 		return connection;
+	}
+
+	public static void closeConnection() {
+		try {
+			if (connection != null) {
+				connection.close();
+			}
+		} catch (Exception e) {
+			// do nothing
+		}
 	}
 }

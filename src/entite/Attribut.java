@@ -9,7 +9,9 @@ public class Attribut {
 		this.attribut_id = attribut_id;
 		this.name = name;
 		this.value = value;
+	}
 
+	public Attribut(){
 	}
 
 	public Integer getAttribut_id() {
