@@ -4,28 +4,28 @@ import java.util.ArrayList;
 
 import database.GenericDAO;
 
-public class Joueurs implements GenericDAO<Joueurs>{
+public class Joueur implements GenericDAO<Joueur>{
 
-	private Integer joueurs_id;
+	private Integer joueur_id;
 	private String lastname;
 	private String firstname;
 	private String surname;
 	private Integer price;
 
-	public Joueurs(Integer joueurs_id, String lastname, String firstname, String surname, Integer price){
-		this.joueurs_id = joueurs_id;
+	public Joueur(Integer joueur_id, String lastname, String firstname, String surname, Integer price){
+		this.joueur_id = joueur_id;
 		this.lastname = lastname;
 		this.firstname = firstname;
 		this.surname = surname;
 		this.price = price;
 	}
 
-	public Integer getJoueurs_id() {
-		return joueurs_id;
+	public Integer getJoueur_id() {
+		return joueur_id;
 	}
 
-	public void setJoueurs_id(Integer joueurs_id) {
-		this.joueurs_id = joueurs_id;
+	public void setJoueur_id(Integer joueur_id) {
+		this.joueur_id = joueur_id;
 	}
 
 	public String getLastname() {
@@ -61,13 +61,13 @@ public class Joueurs implements GenericDAO<Joueurs>{
 	}
 
 	@Override
-	public Joueurs SelectAll() {
+	public Joueur SelectAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ArrayList<Joueurs> Select(Integer id) {
+	public ArrayList<Joueur> Select(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -85,13 +85,13 @@ public class Joueurs implements GenericDAO<Joueurs>{
 	}
 
 	@Override
-	public void Update(Joueurs item) {
+	public void Update(Joueur item) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public Joueurs Insert(Joueurs item) {
+	public Joueur Insert(Joueur item) {
 		// TODO Auto-generated method stub
 		return null;
 	}
