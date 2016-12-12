@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS Jeu_Foot;
+
+CREATE DATABASE Jeu_Foot;
+
+USE Jeu_Foot;
