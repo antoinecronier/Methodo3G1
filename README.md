@@ -1,1 +1,0 @@
-# Methodo3G1
