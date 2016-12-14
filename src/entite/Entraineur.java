@@ -1,19 +1,28 @@
 package entite;
 
+import java.util.ArrayList;
+
+import database.IGenericDAO;
+
 public class Entraineur {
-	
+
 	private Integer entraineur_id;
 	private String firstname;
 	private String lastname;
+<<<<<<< HEAD
 	private Integer club_id;
 
 	public Entraineur(Integer entraineur_id, String firstname, String lastname, Integer club_id) {
+=======
+
+	public Entraineur(Integer entraineur_id, String firstname, String lastname) {
+>>>>>>> origin
 		this.entraineur_id = entraineur_id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.club_id = club_id;
 	}
-	
+
 	public Integer getEntraineur_id() {
 		return entraineur_id;
 	}
@@ -37,6 +46,7 @@ public class Entraineur {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
+<<<<<<< HEAD
 
 	public Integer getClub_id() {
 		return club_id;
@@ -82,4 +92,6 @@ public class Entraineur {
 		return null;
 	}
 
+=======
+>>>>>>> origin
 }

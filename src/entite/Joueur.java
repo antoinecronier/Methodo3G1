@@ -2,8 +2,13 @@ package entite;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+import database.IGenericDAO;
+
+>>>>>>> origin
 public class Joueur {
-	
+
 	private Integer joueur_id;
 	private String lastname;
 	private String firstname;
@@ -61,6 +66,7 @@ public class Joueur {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
+<<<<<<< HEAD
 	
 	public Integer getClub_id() {
 		return club_id;
@@ -114,4 +120,6 @@ public class Joueur {
 		return null;
 	}
 	
+=======
+>>>>>>> origin
 }
