@@ -3,72 +3,58 @@ package entite;
 import java.sql.Time;
 import java.util.ArrayList;
 
-import database.GenericDAO;
+import database.IGenericDAO;
 
-public class But implements GenericDAO<But>
-{
-	private Integer but_id;
-	private Time butMarque;
+public class But {
+	private Integer id_but;
+	private Time atTime;
+	private Integer id_match;
+	private Integer id_joueur;
 
-	public But(Integer but_id, Time butMarque){
+	public But(Integer id_but, Time atTime, Integer id_match, Integer id_joueur){
 
-	this.but_id = but_id;
-	this.butMarque = butMarque;
-
-	}
-
-	public Integer getBut_id() {
-		return but_id;
-	}
-
-	public void setBut_id(Integer but_id) {
-		this.but_id = but_id;
-	}
-
-	public Time getButMarque() {
-		return butMarque;
-	}
-
-	public void setButMarque(Time butMarque) {
-		this.butMarque = butMarque;
-	}
-
-	@Override
-	public But SelectAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<But> Select(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void DeleteAll() {
-		// TODO Auto-generated method stub
+	this.id_but = id_but;
+	this.atTime = atTime;
+	this.id_match = id_match;
+	this.id_joueur = id_joueur;
 
 	}
-
-	@Override
-	public void Delete(Integer id) {
-		// TODO Auto-generated method stub
-
+	
+	public But(){
+		
+	}
+	
+	public Integer getId_but() {
+		return id_but;
 	}
 
-	@Override
-	public void Update(But item) {
-		// TODO Auto-generated method stub
-
+	public void setId_but(Integer id_but) {
+		this.id_but = id_but;
 	}
 
-	@Override
-	public But Insert(But item) {
-		// TODO Auto-generated method stub
-		return null;
+	public Time getAtTime() {
+		return atTime;
 	}
+
+	public void setAtTime(Time atTime) {
+		this.atTime = atTime;
+	}
+
+	public Integer getId_match() {
+		return id_match;
+	}
+
+	public void setId_match(Integer id_match) {
+		this.id_match = id_match;
+	}
+
+	public Integer getId_joueur() {
+		return id_joueur;
+	}
+
+	public void setId_joueur(Integer id_joueur) {
+		this.id_joueur = id_joueur;
+	}
+	
 }
-
-
 
