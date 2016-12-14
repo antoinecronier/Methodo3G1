@@ -29,11 +29,10 @@ public class DatabaseAccess {
 
 	public static void closeConnection() {
 		try {
-			if (connection != null) {
+			if (connection != null)
 				connection.close();
-			}
 		} catch (Exception e) {
-			// do nothing
+			System.err.println("Connection closing failed.");
 		}
 	}
 }

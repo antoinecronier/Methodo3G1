@@ -2,6 +2,7 @@ package database.dao;
 
 import entite.Attribut;
 import entite.Club;
+import entite.Joueur;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,15 +16,14 @@ import database.IGenericDAO;
 
 public class ClubDAO implements IGenericDAO<Club>{
 	
-	public final static String ID = "club_id";
+	public final static String ID = "id_club";
 	public final static String NAME = "name";
-	public final static Integer MONEY = money;
-	public final static Integer TOTAL_POINTS = totalPoints;
+	public final static String MONEY = "club_money";
 	public final static String TABLE = "Club";
 
 	@Override
-	public ArrayList<ClubDAO> SelectAll() {
-		List<Attribut> clubs = new LinkedList<Attribut>();
+	public ArrayList<Club> SelectAll() {
+		List<Club> clubs = new LinkedList<Club>();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
@@ -33,9 +33,10 @@ public class ClubDAO implements IGenericDAO<Club>{
 			Club club = null;
 			while (resultSet.next()) {
 				club = new Club();
-				club.setClub_id(Integer.parseInt(resultSet
+				club.setId_club(Integer.parseInt(resultSet
 						.getString(ID)));
 				club.setName(resultSet.getString(NAME));
+				club.setClub_money(Integer.parseInt(resultSet.getString(MONEY)));
 				clubs.add(club);
 			}
 			resultSet.close();
@@ -44,34 +45,39 @@ public class ClubDAO implements IGenericDAO<Club>{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		ArrayList<Attribut> returnAttributs = new ArrayList<Attribut>(attributs);
-		return returnAttributs;
+
+		ArrayList<Club> returnClubs = new ArrayList<Club>(clubs);
+		return returnClubs;
 	}
 
 	@Override
-	public Attribut Select(Integer id) {
-		Attribut attribut = new Attribut();
+	public Club Select(Integer id) {
+		Club clubs = new Club();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
-					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE Attribut. = "
+
+					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE Club. = "
+
+					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE Club. = "
+
 					+ id + ";");
 
 			resultSet.next();
-
-			attribut.setAttribut_id(Integer.parseInt(resultSet
+			clubs.setId_club(Integer.parseInt(resultSet
 					.getString(ID)));
-			attribut.setName(resultSet.getString(NAME));
+			clubs.setName(resultSet.getString(NAME));
 
+			clubs.setId_club(Integer.parseInt(resultSet
+					.getString(ID)));
+			clubs.setName(resultSet.getString(NAME));
 			resultSet.close();
 			statement.close();
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
-		return attribut;
+		return clubs;
 	}
 
 	@Override
@@ -106,14 +112,14 @@ public class ClubDAO implements IGenericDAO<Club>{
 	}
 
 	@Override
-	public void Update(Attribut item) {
+	public void Update(Club item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
 					+" "+NAME+" = "+ item.getName() + ""
-					+" WHERE "+TABLE+"."+ID+" = " + item.getAttribut_id()
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_club()
 					+";");
 
 			resultSet.close();
@@ -124,7 +130,7 @@ public class ClubDAO implements IGenericDAO<Club>{
 	}
 
 	@Override
-	public void Insert(Attribut item) {
+	public void Insert(Club item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
