@@ -51,16 +51,17 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
-					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE Attribut. = "
+					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE "+TABLE+"."+ID+" = "
 					+ id + ";");
 
-			resultSet.next();
+			if (resultSet.next() != false) {
+				attribut.setAttribut_id(Integer.parseInt(resultSet
+						.getString(ID)));
+				attribut.setName(resultSet.getString(NAME));
+				resultSet.close();
+			}
 
-			attribut.setAttribut_id(Integer.parseInt(resultSet
-					.getString(ID)));
-			attribut.setName(resultSet.getString(NAME));
 
-			resultSet.close();
 			statement.close();
 
 		} catch (SQLException e) {
@@ -75,10 +76,9 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
-			ResultSet resultSet = statement.executeQuery("DELETE FROM "
+			statement.execute("DELETE FROM "
 					+ DatabaseAccess.DB + "."+TABLE+";");
 
-			resultSet.close();
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -90,11 +90,10 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
-			ResultSet resultSet = statement.executeQuery("DELETE FROM "
-					+ DatabaseAccess.DB + ".Attribut WHERE "+TABLE+"."+ID+" = " + id
+			statement.execute("DELETE FROM "
+					+ DatabaseAccess.DB + "."+TABLE+" WHERE "+TABLE+"."+ID+" = " + id
 					+ " ;");
 
-			resultSet.close();
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -106,13 +105,12 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
-			ResultSet resultSet = statement.executeQuery("UPDATE "
+			statement.execute("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+NAME+" = "+ item.getName() + ""
+					+" "+NAME+" = '"+ item.getName() + "'"
 					+" WHERE "+TABLE+"."+ID+" = " + item.getAttribut_id()
 					+";");
 
-			resultSet.close();
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -124,16 +122,14 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
-			ResultSet resultSet = statement.executeQuery("INSERT INTO "
-					+ DatabaseAccess.DB + "."+TABLE+" () VALUES "
-					+"(null," + item.getName() + ")"+
+			statement.execute("INSERT INTO "
+					+ DatabaseAccess.DB + "."+TABLE+" ("+NAME+") VALUES "
+					+"('" + item.getName() + "')"+
 					";");
 
-			resultSet.close();
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
-
 }
