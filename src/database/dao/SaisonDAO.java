@@ -9,33 +9,30 @@ import java.util.List;
 
 import database.DatabaseAccess;
 import database.IGenericDAO;
-import entite.Attribut;
-import entite.Joueur;
+import entite.Saison;
 
+public class SaisonDAO implements IGenericDAO<Saison> {
 
-public class PossedeDAO implements IGenericDAO<Joueur> {
-	
-	public final static String TABLE = "Posseder";
-	public final static String ID_JOUEUR = "id_joueur";
-	public final static String ID_ATTRIBUT = "id_attribut";
-	public final static String VALEUR = "valeur";
+	public final static String ID = "saison_id";
+	public final static String NAME = "name";
+	public final static String TABLE = "Saison";
 
 	@Override
-	public ArrayList<Joueur> SelectAll() {
-		// TODO Auto-generated method stub
+	public ArrayList<Saison> SelectAll() {
+		List<Saison> saisons = new LinkedList<Saison>();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
-+ DatabaseAccess.DB + "."+JoueurDAO.TABLE+" INNER JOIN "+TABLE+" ON "+JoueurDAO.ID+" = "+ID_JOUEUR+
-							" INNER JOIN "+AttributDAO.TABLE+" ON "+AttributDAO.ID+" = "+ID_JOUEUR+";");
-			
-			Joueur joueur = null;
-			while (resultSet.next()) {
-				joueur = new Joueur();
-				joueur.setId_joueur(Integer.parseInt(resultSet
-						.getString(ID_JOUEUR)));
+					+ DatabaseAccess.DB + "."+TABLE+" ;");
 
+			Saison saison = null;
+			while (resultSet.next()) {
+				saison = new Saison();
+				saison.setSaison_id(Integer.parseInt(resultSet
+						.getString(ID)));
+				saison.setName(resultSet.getString(NAME));
+				saisons.add(saison);
 			}
 			resultSet.close();
 			statement.close();
@@ -43,43 +40,39 @@ public class PossedeDAO implements IGenericDAO<Joueur> {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		ArrayList<Joueur> returnJoueur = new ArrayList<Joueur>();
-		return returnJoueur;
-		}		
-		
-	
+		ArrayList<Saison> returnSaisons = new ArrayList<Saison>(saisons);
+		return returnSaisons;
+	}
 
 	@Override
-	public Joueur Select(Integer id) {
-		// TODO Auto-generated method stub
-		Joueur joueur = new Joueur();
+	public Saison Select(Integer id) {
+		Saison saison = new Saison();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
-					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE Joueur. = "
+					+ DatabaseAccess.DB + "."+TABLE+" " + "WHERE "+TABLE+"."+ID+" = "
 					+ id + ";");
 
-			resultSet.next();
+			if (resultSet.next() != false) {
+				saison.setSaison_id(Integer.parseInt(resultSet
+						.getString(ID)));
+				saison.setName(resultSet.getString(NAME));
+				resultSet.close();
+			}
 
-			joueur.setId_joueur(Integer.parseInt(resultSet
-					.getString(ID_JOUEUR)));
-			
 
-			resultSet.close();
 			statement.close();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
-		return null;
+
+		return saison;
 	}
 
 	@Override
 	public void DeleteAll() {
-		// TODO Auto-generated method stub
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
@@ -90,62 +83,53 @@ public class PossedeDAO implements IGenericDAO<Joueur> {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	@Override
 	public void Delete(Integer id) {
-		// TODO Auto-generated method stub
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("DELETE FROM "
-					+ DatabaseAccess.DB + "."+TABLE+" WHERE "+TABLE+"."+ID_JOUEUR+" = " + id
+					+ DatabaseAccess.DB + "."+TABLE+" WHERE "+TABLE+"."+ID+" = " + id
 					+ " ;");
 
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	@Override
-	public void Update(Joueur item) {
-		// TODO Auto-generated method stub
+	public void Update(Saison item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
-			ResultSet resultSet1 = statement.executeQuery("UPDATE "
+			statement.execute("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+ID_ATTRIBUT+" = "+ item.getId_joueur() + ""
-					+" WHERE "+TABLE+"."+ID_JOUEUR+" = " + item.getId_joueur()
+					+" "+NAME+" = '"+ item.getName() + "'"
+					+" WHERE "+TABLE+"."+ID+" = " + item.getSaison_id()
 					+";");
-			
-			resultSet1.close();
-			
+
+			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	@Override
-	public void Insert(Joueur item) {
-		// TODO Auto-generated method stub
+	public void Insert(Saison item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("INSERT INTO "
-					+ DatabaseAccess.DB + "."+VALEUR+" ("+AttributDAO.TABLE+") VALUES "
-					+"('" + item.getAttribut() + "')"+
+					+ DatabaseAccess.DB + "."+TABLE+" ("+NAME+") VALUES "
+					+"('" + item.getName() + "')"+
 					";");
 
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
-
 }
