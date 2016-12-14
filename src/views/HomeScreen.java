@@ -1,4 +1,4 @@
-package home_screen;
+package views;
 
 
 import java.awt.*;
