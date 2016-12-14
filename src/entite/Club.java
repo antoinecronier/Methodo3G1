@@ -1,27 +1,31 @@
 package entite;
 
 import java.util.ArrayList;
+import database.IGenericDAO;
 
-import database.GenericDAO;
-
-public class Club implements GenericDAO<Club> {
-
-	private Integer club_id;
+public class Club {
+	private Integer id_club;
 	private String name;
-	private Integer money;
+	private Integer club_money;
+	private ArrayList<Joueur> joueur;
 
-	public Club(Integer club_id, String name, Integer money) {
-		this.club_id = club_id;
+	public Club(Integer id_club, String name, Integer club_money, ArrayList<Joueur> joueur) {
+		this.id_club = id_club;
 		this.name = name;
-		this.money = money;
+		this.club_money = club_money;
+		this.joueur = joueur;
 	}
 
-	public Integer getClub_id() {
-		return club_id;
+	public Club() {
+		
+	}
+	
+	public Integer getId_club() {
+		return id_club;
 	}
 
-	public void setClub_id(Integer club_id) {
-		this.club_id = club_id;
+	public void setId_club(Integer id_club) {
+		this.id_club = id_club;
 	}
 
 	public String getName() {
@@ -32,48 +36,19 @@ public class Club implements GenericDAO<Club> {
 		this.name = name;
 	}
 
-	public Integer getMoney() {
-		return money;
+	public Integer getClub_money() {
+		return club_money;
 	}
 
-	public void setMoney(Integer money) {
-		this.money = money;
+	public void setClub_money(Integer club_money) {
+		this.club_money = club_money;
 	}
 
-	@Override
-	public Club SelectAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Joueur> getJoueur() {
+		return joueur;
 	}
 
-	@Override
-	public ArrayList<Club> Select(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public void setJoueur(ArrayList<Joueur> joueur) {
+		this.joueur = joueur;
 	}
-
-	@Override
-	public void DeleteAll() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Delete(Integer id) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Update(Club item) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Club Insert(Club item) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
