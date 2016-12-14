@@ -23,20 +23,20 @@ public class ClubDAO implements IGenericDAO<Club>{
 
 	@Override
 	public ArrayList<ClubDAO> SelectAll() {
-		List<Attribut> attributs = new LinkedList<Attribut>();
+		List<Attribut> clubs = new LinkedList<Attribut>();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
 					+ DatabaseAccess.DB + "."+TABLE+" ;");
 
-			Attribut attribut = null;
+			Club club = null;
 			while (resultSet.next()) {
-				attribut = new Attribut();
-				attribut.setAttribut_id(Integer.parseInt(resultSet
+				club = new Club();
+				club.setClub_id(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName(resultSet.getString(NAME));
-				attributs.add(attribut);
+				club.setName(resultSet.getString(NAME));
+				clubs.add(club);
 			}
 			resultSet.close();
 			statement.close();
