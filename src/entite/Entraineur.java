@@ -1,42 +1,54 @@
 package entite;
 
-import java.util.ArrayList;
-
 import database.IGenericDAO;
 
 public class Entraineur {
+	private Integer id_entraineur;
+	private String firstname_entraineur;
+	private String lastname_entraineur;
+	private Integer id_club;
 
-	private Integer entraineur_id;
-	private String firstname;
-	private String lastname;
-
-	public Entraineur(Integer entraineur_id, String firstname, String lastname) {
-		this.entraineur_id = entraineur_id;
-		this.firstname = firstname;
-		this.lastname = lastname;
+	public Entraineur(Integer id_entraineur, String firstname_entraineur, String lastname_entraineur, Integer id_club) {
+		this.id_entraineur = id_entraineur;
+		this.firstname_entraineur = firstname_entraineur;
+		this.lastname_entraineur = lastname_entraineur;
+		this.id_club = id_club;
+	}
+	
+	public Entraineur() {
+		
 	}
 
-	public Integer getEntraineur_id() {
-		return entraineur_id;
+	public Integer getId_entraineur() {
+		return id_entraineur;
 	}
 
-	public void setEntraineur_id(Integer entraineur_id) {
-		this.entraineur_id = entraineur_id;
+	public void setId_entraineur(Integer id_entraineur) {
+		this.id_entraineur = id_entraineur;
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String getFirstname_entraineur() {
+		return firstname_entraineur;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstname_entraineur(String firstname_entraineur) {
+		this.firstname_entraineur = firstname_entraineur;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getLastname_entraineur() {
+		return lastname_entraineur;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastname_entraineur(String lastname_entraineur) {
+		this.lastname_entraineur = lastname_entraineur;
 	}
+
+	public Integer getId_club() {
+		return id_club;
+	}
+
+	public void setId_club(Integer id_club) {
+		this.id_club = id_club;
+	}
+	
 }
