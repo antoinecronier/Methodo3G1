@@ -10,7 +10,6 @@ import java.util.*;
 import javax.swing.JFrame;
 import com.toedter.calendar.JCalendar;
 import com.toedter.calendar.JDateChooser;
-
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 
@@ -19,12 +18,10 @@ public class CalendrierReservation {
 	private final JButton button = new JButton("Valider");
 	private JCalendar calendar;
 	private Date selectedDate = new Date();
-
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -37,14 +34,12 @@ public class CalendrierReservation {
 
 		});
 	}
-
 	/**
 	 * Create the application.
 	 */
 	public CalendrierReservation() {
 		initialize();
 	}
-
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -52,10 +47,8 @@ public class CalendrierReservation {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 		calendar = new JCalendar();
 		frame.getContentPane().add(calendar, BorderLayout.CENTER);
-
 		JDateChooser chooser = new JDateChooser();
 		chooser.getCalendarButton().addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -75,9 +68,7 @@ public class CalendrierReservation {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println(selectedDate);
-
 				SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd");
-
 				String reformattedStr = myFormat.format(selectedDate);
 				System.out.println(reformattedStr);
 			}
