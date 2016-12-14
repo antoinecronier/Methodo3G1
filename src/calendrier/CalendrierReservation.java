@@ -23,7 +23,7 @@ public class CalendrierReservation {
 	private JFrame frame;
 	private final JButton button = new JButton("Valider");
 	JCalendar calendar;
-	protected char[] datos;
+	
 	
 	/**
 	 * Launch the application.
@@ -81,7 +81,8 @@ public class CalendrierReservation {
 		                System.out.println(arg0.getPropertyName()
 		                    + ": " + (Date) arg0.getNewValue());
 		               
-		              Date datos = (Date) arg0.getNewValue();
+		              String datos = arg0.getPropertyName()
+			                    + ": " + (Date) arg0.getNewValue();
 //		                SimpleDateFormat fromUser = new SimpleDateFormat("dd/MM/yyyy");
 //		                SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd");
 //
