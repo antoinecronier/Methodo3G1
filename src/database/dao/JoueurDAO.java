@@ -35,9 +35,9 @@ public class JoueurDAO implements IGenericDAO<Joueur> {
 				joueur1 = new Joueur();
 				joueur1.setJoueur_id(Integer.parseInt(resultSet
 						.getString(ID)));
-				joueur1.setLastname(resultSet.getString(LASTNAME));
-				joueur1.setFirstname(resultSet.getString(FIRSTNAME));
-				joueur1.setSurname(resultSet.getString(SURNAME));
+				joueur1.setLastname_joueur(resultSet.getString(LASTNAME));
+				joueur1.setFirstname_joueur(resultSet.getString(FIRSTNAME));
+				joueur1.setSurname_joueur(resultSet.getString(SURNAME));
 				joueur1.setPrice(Integer.parseInt(resultSet.getString(PRICE)));
 				joueurs.add(joueur1);
 			}
@@ -65,9 +65,9 @@ public class JoueurDAO implements IGenericDAO<Joueur> {
 
 			joueur.setJoueur_id(Integer.parseInt(resultSet
 					.getString(ID)));
-			joueur.setLastname(resultSet.getString(LASTNAME));
-			joueur.setFirstname(resultSet.getString(FIRSTNAME));
-			joueur.setSurname(resultSet.getString(SURNAME));
+			joueur.setLastname_joueur(resultSet.getString(LASTNAME));
+			joueur.setFirstname_joueur(resultSet.getString(FIRSTNAME));
+			joueur.setSurname_joueur(resultSet.getString(SURNAME));
 			joueur.setPrice(Integer.parseInt(resultSet.getString(PRICE)));
 
 			resultSet.close();
@@ -118,17 +118,17 @@ public class JoueurDAO implements IGenericDAO<Joueur> {
 					.createStatement();
 			ResultSet resultSet1 = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+LASTNAME+" = "+ item.getLastname() + ""
+					+" "+LASTNAME+" = "+ item.getLastname_joueur() + ""
 					+" WHERE "+TABLE+"."+ID+" = " + item.getJoueur_id()
 					+";");
 			ResultSet resultSet2 = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+FIRSTNAME+" = "+ item.getFirstname() + ""
+					+" "+FIRSTNAME+" = "+ item.getFirstname_joueur() + ""
 					+" WHERE "+TABLE+"."+ID+" = " + item.getJoueur_id()
 					+";");
 			ResultSet resultSet3 = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+SURNAME+" = "+ item.getSurname() + ""
+					+" "+SURNAME+" = "+ item.getSurname_joueur() + ""
 					+" WHERE "+TABLE+"."+ID+" = " + item.getJoueur_id()
 					+";");
 			ResultSet resultSet4 = statement.executeQuery("UPDATE "
@@ -153,15 +153,15 @@ public class JoueurDAO implements IGenericDAO<Joueur> {
 					.createStatement();
 			ResultSet resultSet1 = statement.executeQuery("INSERT INTO "
 					+ DatabaseAccess.DB + "."+TABLE+" () VALUES "
-					+"(null," + item.getLastname() + ")"+
+					+"(null," + item.getLastname_joueur() + ")"+
 					";");
 			ResultSet resultSet2 = statement.executeQuery("INSERT INTO "
 					+ DatabaseAccess.DB + "."+TABLE+" () VALUES "
-					+"(null," + item.getFirstname() + ")"+
+					+"(null," + item.getFirstname_joueur() + ")"+
 					";");
 			ResultSet resultSet3 = statement.executeQuery("INSERT INTO "
 					+ DatabaseAccess.DB + "."+TABLE+" () VALUES "
-					+"(null," + item.getSurname() + ")"+
+					+"(null," + item.getSurname_joueur() + ")"+
 					";");
 			ResultSet resultSet4 = statement.executeQuery("INSERT INTO "
 					+ DatabaseAccess.DB + "."+TABLE+" () VALUES "
