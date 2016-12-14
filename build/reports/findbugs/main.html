@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		</p>
+<p>FindBugs version: 3.0.0</p>
+<p>Code analyzed:</p>
+<ul>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\database\DatabaseAccess.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\database\IGenericDAO.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\database\dao\AttributDAO.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\Attribut.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\But.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\Club.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\Entrainement.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\Entraineur.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\Joueur.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\Match.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\entite\Saison.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\Game_Page_JAVA\Game_Page_JAVA$1.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\Game_Page_JAVA\Game_Page_JAVA$2.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\Game_Page_JAVA\Game_Page_JAVA.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\home_screen\Home_Screen$1.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\home_screen\Home_Screen$2.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\home_screen\Home_Screen.class</li>
+<li>C:\Users\Fabien\workspace\Methodo3G1\build\classes\main\management\Main.class</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>482 lines of code analyzed,
+	in 18 classes, 
+	in 6 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right"/>
+<td align="right">0.00</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">9</td>
+<td align="right">18.67</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>9</b>
+</td>
+<td align="right">
+<b>18.67</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</li>
+<li>
+<a href="#Warnings_SECURITY">Security Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</td>
+<td align="right">8</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_SECURITY">Security Warnings</a>
+</td>
+<td align="right">1</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>9</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65618');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.Delete(Integer) may fail to clean up java.sql.Statement on checked exception</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65618" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.Delete(Integer)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 92] is not discharged<br/>Path continues at AttributDAO.java:[line 93]<br/>Path continues at AttributDAO.java:[line 99]<br/>Path continues at AttributDAO.java:[line 100]<br/>Path continues at AttributDAO.java:[line 102]<br/>Remaining obligations: {Statement x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65739');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.DeleteAll() may fail to clean up java.sql.Statement on checked exception</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65739" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.DeleteAll()<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 77] is not discharged<br/>Path continues at AttributDAO.java:[line 78]<br/>Path continues at AttributDAO.java:[line 83]<br/>Path continues at AttributDAO.java:[line 84]<br/>Path continues at AttributDAO.java:[line 86]<br/>Remaining obligations: {Statement x 1}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65860');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.Insert(Attribut) may fail to clean up java.sql.Statement on checked exception</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65860" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.Insert(Attribut)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 126] is not discharged<br/>Path continues at AttributDAO.java:[line 127]<br/>Path continues at AttributDAO.java:[line 129]<br/>Path continues at AttributDAO.java:[line 134]<br/>Path continues at AttributDAO.java:[line 135]<br/>Path continues at AttributDAO.java:[line 137]<br/>Remaining obligations: {Statement x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65992');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.Select(Integer) may fail to clean up java.sql.ResultSet on checked exception</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65992" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.Select(Integer)<br/>Reference type java.sql.ResultSet<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 53] is not discharged<br/>Path continues at AttributDAO.java:[line 57]<br/>Path continues at AttributDAO.java:[line 66]<br/>Path continues at AttributDAO.java:[line 67]<br/>Path continues at AttributDAO.java:[line 70]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66113');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.Select(Integer) may fail to clean up java.sql.Statement on checked exception</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66113" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.Select(Integer)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 52] is not discharged<br/>Path continues at AttributDAO.java:[line 53]<br/>Path continues at AttributDAO.java:[line 57]<br/>Path continues at AttributDAO.java:[line 66]<br/>Path continues at AttributDAO.java:[line 67]<br/>Path continues at AttributDAO.java:[line 70]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66245');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.SelectAll() may fail to clean up java.sql.ResultSet on checked exception</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66245" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.SelectAll()<br/>Reference type java.sql.ResultSet<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 26] is not discharged<br/>Path continues at AttributDAO.java:[line 29]<br/>Path continues at AttributDAO.java:[line 30]<br/>Path continues at AttributDAO.java:[line 40]<br/>Path continues at AttributDAO.java:[line 41]<br/>Path continues at AttributDAO.java:[line 43]<br/>Path continues at AttributDAO.java:[line 44]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66388');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.SelectAll() may fail to clean up java.sql.Statement on checked exception</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66388" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.SelectAll()<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 25] is not discharged<br/>Path continues at AttributDAO.java:[line 26]<br/>Path continues at AttributDAO.java:[line 29]<br/>Path continues at AttributDAO.java:[line 30]<br/>Path continues at AttributDAO.java:[line 40]<br/>Path continues at AttributDAO.java:[line 41]<br/>Path continues at AttributDAO.java:[line 43]<br/>Path continues at AttributDAO.java:[line 44]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66542');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>database.dao.AttributDAO.Update(Attribut) may fail to clean up java.sql.Statement on checked exception</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66542" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">Bug type OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.Update(Attribut)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at AttributDAO.java:[line 108] is not discharged<br/>Path continues at AttributDAO.java:[line 109]<br/>Path continues at AttributDAO.java:[line 111]<br/>Path continues at AttributDAO.java:[line 112]<br/>Path continues at AttributDAO.java:[line 117]<br/>Path continues at AttributDAO.java:[line 118]<br/>Path continues at AttributDAO.java:[line 120]<br/>Remaining obligations: {Statement x 1}</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_SECURITY">Security Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66685');">
+<td>
+<span class="priority-2">SQL</span>
+</td>
+<td>La méthode database.dao.AttributDAO.Insert(Attribut) passe une chaîne non constante à la méthode execute d'une commande SQL (statement)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66685" style="display: none;">
+<a href="#SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">Bug type SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE (click for details)</a>
+<br/>In class database.dao.AttributDAO<br/>In method database.dao.AttributDAO.Insert(Attribut)<br/>At AttributDAO.java:[line 127]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE">OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE: Method may fail to clean up stream or resource on checked exception</a>
+</h2>
+          
+          <p>
+          This method may fail to clean up (close, dispose of) a stream,
+          database object, or other
+          resource requiring an explicit cleanup operation.
+          </p>
+
+          <p>
+          In general, if a method opens a stream or other resource,
+          the method should use a try/finally block to ensure that
+          the stream or resource is cleaned up before the method
+          returns.
+          </p>
+
+          <p>
+          This bug pattern is essentially the same as the
+          OS_OPEN_STREAM and ODR_OPEN_DATABASE_RESOURCE
+          bug patterns, but is based on a different
+          (and hopefully better) static analysis technique.
+          We are interested is getting feedback about the
+          usefulness of this bug pattern.
+          To send feedback, either:
+          </p>
+          <ul>
+            <li>send email to findbugs@cs.umd.edu</li>
+            <li>file a bug report: <a href="http://findbugs.sourceforge.net/reportingBugs.html">http://findbugs.sourceforge.net/reportingBugs.html</a></li>
+          </ul>
+
+          <p>
+          In particular,
+          the false-positive suppression heuristics for this
+          bug pattern have not been extensively tuned, so
+          reports about false positives are helpful to us.
+          </p>
+
+          <p>
+          See Weimer and Necula, <i>Finding and Preventing Run-Time Error Handling Mistakes</i>, for
+          a description of the analysis technique.
+          </p>
+          
+      
+<h2>
+<a name="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE: Une chaîne non constante est passée à la méthode execute d'une commande SQL</a>
+</h2>
+
+<p>Cette méthode invoque la méthode <code>execute</code> d'une commande SQL (statement) avec une chaîne qui semble générée dynamiquement. Préférer la préparation de la commande avec un <code>PreparedStatement</code>, c'est plus efficace et bien moins vulnérable aux attaques par injection SQL (insertion de code SQL malveillant au sein d'une requête).</p>
+
+  </body>
+</html>
