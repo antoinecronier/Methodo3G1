@@ -6,32 +6,55 @@ import java.util.ArrayList;
 import database.IGenericDAO;
 
 public class But {
-	private Integer but_id;
-	private Time butMarque;
+	private Integer id_but;
+	private Time atTime;
+	private Integer id_match;
+	private Integer id_joueur;
 
-	public But(Integer but_id, Time butMarque){
+	public But(Integer id_but, Time atTime, Integer id_match, Integer id_joueur){
 
-	this.but_id = but_id;
-	this.butMarque = butMarque;
+	this.id_but = id_but;
+	this.atTime = atTime;
+	this.id_match = id_match;
+	this.id_joueur = id_joueur;
 
 	}
-
-	public Integer getBut_id() {
-		return but_id;
+	
+	public But(){
+		
+	}
+	
+	public Integer getId_but() {
+		return id_but;
 	}
 
-	public void setBut_id(Integer but_id) {
-		this.but_id = but_id;
+	public void setId_but(Integer id_but) {
+		this.id_but = id_but;
 	}
 
-	public Time getButMarque() {
-		return butMarque;
+	public Time getAtTime() {
+		return atTime;
 	}
 
-	public void setButMarque(Time butMarque) {
-		this.butMarque = butMarque;
+	public void setAtTime(Time atTime) {
+		this.atTime = atTime;
 	}
+
+	public Integer getId_match() {
+		return id_match;
+	}
+
+	public void setId_match(Integer id_match) {
+		this.id_match = id_match;
+	}
+
+	public Integer getId_joueur() {
+		return id_joueur;
+	}
+
+	public void setId_joueur(Integer id_joueur) {
+		this.id_joueur = id_joueur;
+	}
+	
 }
-
-
 

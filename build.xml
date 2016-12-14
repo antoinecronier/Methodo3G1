@@ -1,0 +1,262 @@
+<project name="AntDefault" default="run" basedir=".">
+    <description>   
+        Ant build sample for running 
+        - findbugs, 
+        - pmd, 
+        - checkstyle, 
+        - cobertrua and 
+        - junit.
+    </description>
+
+    <property environment="env" />
+    <condition property="checkstyle.home.dir" value="${env.CHECKSTYLE_HOME}">
+        <isset property="env.CHECKSTYLE_HOME" />
+    </condition>
+    <condition property="findbugs.home.dir" value="${env.FINDBUGS_HOME}">
+        <isset property="env.FINDBUGS_HOME" />
+    </condition>
+    <condition property="pmd.home.dir" value="${env.PMD_HOME}">
+        <isset property="env.PMD_HOME" />
+    </condition>
+    <condition property="junit.home.dir" value="${env.JUNIT_HOME}">
+        <isset property="env.JUNIT_HOME" />
+    </condition>
+
+    <property file="ant.properties" />
+
+     <!-- Change the paths to your individual installation directories -->
+    <property name="lib.dir" location="${basedir}/libs" />
+    <property name="src.dir" location="${basedir}/src/main" />
+    <property name="test.dir" location="${basedir}/src/test" />
+    <property name="bin.dir" location="${basedir}/bin" />
+    <property name="htm.dir" location="${basedir}/html" />
+    <property name="report.dir" location="${basedir}/report" />
+
+    <property name="report.checkstyle.dir" location="${report.dir}/checkstyle" />
+    <property name="report.junit.dir" location="${report.dir}/junit" />
+    <property name="report.findbugs.dir" location="${report.dir}/findbugs" />
+    <property name="report.pmd.dir" location="${report.dir}/pmd" />
+   
+    <property name="instrumented.dir" location="${basedir}/instrumented" />
+    <property name="report.temp.dir" location="${report.dir}/temp" />
+
+    <path id="run.classpath">
+        <pathelement path="${bin.dir}" />
+    </path>
+    
+    <path id="test.classpath">
+        <path refid="run.classpath" />
+        <pathelement location="${bin.dir}/test"/> 
+        <fileset dir="libs">
+            <include name="junit-4.10.jar"/>
+        </fileset>
+    </path>
+
+    <!-- -->
+    <target name="clean" description="Delete all result to start with a clean build.">
+        <delete dir="${report.junit.dir}" />
+        <delete dir="${report.findbugs.dir}" />
+        <delete dir="${report.checkstyles.dir}" />
+        <delete dir="${report.temp.dir}" />
+        <delete dir="${bin.dir}" />
+    </target>
+
+    <target name="prepare.report.dir" description="Prepares the reports folder">
+        <copy todir="${report.dir}">
+            <fileset dir="${htm.dir}">
+                <include name="*.htm" />
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- -->
+    <target name="findbugs"
+            depends="compile"
+            description="Run code analysis over code to check for problems."
+    >
+        <!-- Fail this target if FindBugs is not installed. -->
+        <available file="${findbugs.home.dir}/lib/findbugs.jar" property="findbugs.available" />
+        <fail unless="findbugs.available"
+              message="Error: FINDBUGS_HOME not set or findbugs.jar not found."
+        />
+        <taskdef name="findbugs"
+                 classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+                 classpath="${findbugs.home.dir}/lib/findbugs-ant.jar"
+        />
+
+        <!-- Run FindBugs. -->
+        <mkdir dir="${report.findbugs.dir}" />
+        <findbugs home="${findbugs.home.dir}"
+                  workHard="true"
+                  output="xml:withMessages"
+                  outputFile="${report.findbugs.dir}/findbugs.xml"
+        >
+            <class location="${bin.dir}" />
+        </findbugs>
+    </target>
+
+    <!-- -->
+    <path id="pmd2.classpath">
+        <pathelement location="${build}" />
+        <fileset dir="${pmd.home.dir}/lib/">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+    
+    <target name="report.pmd">
+        <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd2.classpath" />
+        
+        <mkdir dir="${report.pmd.dir}" />
+        <pmd rulesetfiles="./pmd_rules.xml">
+            <formatter type="xml" toFile="${report.pmd.dir}/pmd_report.xml" />
+            <fileset dir="${src.dir}">
+                <include name="**/*.java" />
+            </fileset>
+        </pmd>
+        <xslt in="${report.pmd.dir}/pmd_report.xml"
+              out="${report.pmd.dir}/pmd_report.html"
+              style="${pmd.home.dir}/stylesheet.xsl"
+        />
+    </target>
+
+    <target name="report.cpd">
+        <taskdef  name="cpd"
+              classpathref="pmd2.classpath"
+              classname="net.sourceforge.pmd.cpd.CPDTask" />
+
+        <cpd
+            minimumTokenCount="100"
+            language="java"
+            format="xml"
+            outputFile="${report.pmd.dir}/cpd_report.xml">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </cpd>
+        <xslt in="${report.pmd.dir}/cpd_report.xml"
+              out="${report.pmd.dir}/cpd_report.html"
+              style="${pmd.home.dir}/stylesheet.xsl"
+        />
+    </target>
+
+    <!-- -->
+    <target name="compile" depends="clean" description="Compile the entire project.">
+        <mkdir dir="${bin.dir}" />
+        <javac debug="true"
+               srcdir="${src.dir}"
+               destdir="${bin.dir}"
+               includeantruntime="true"
+               classpathref="run.classpath">
+            <!--<classpath>
+                <path id="org.junit" location="${junit.home.dir}/junit-4.10.jar}" /> 
+            </classpath>-->
+        </javac>
+    </target>
+    
+    <target name="compile-test" depends="compile" description="Compile the entire project.">
+        <mkdir dir="${bin.dir}" />
+        <javac debug="true"
+               srcdir="${test.dir}"
+               destdir="${bin.dir}"
+               includeantruntime="true"
+               classpathref="test.classpath">
+        </javac>
+    </target>
+
+    <!-- -->
+    <target name="junit"
+            depends="compile-test"
+            description="Run all junit test cases."
+    >
+        <mkdir dir="${report.temp.dir}" />
+
+        <junit printsummary="yes" haltonfailure="no" fork="true">
+            <classpath refid="test.classpath" />
+
+            <formatter type="plain" />
+            <formatter type="xml" />
+
+            <batchtest todir="${report.temp.dir}">
+                <fileset dir="${test.dir}">
+                    <include name="**/*Test*.java" />
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <!-- -->
+    <target name="report.junit" depends="junit" 
+        description="Create a report for the test result.">
+        <delete dir="${report.junit.dir}" />
+        <mkdir dir="${report.junit.dir}" />
+        <junitreport todir="${report.junit.dir}">
+            <fileset dir="${report.temp.dir}">
+                <include name="*.xml" />
+            </fileset>
+            <report format="frames" todir="${report.junit.dir}" />
+        </junitreport>
+    </target>
+
+    <!-- -->
+    <target name="report.findbugs" description="Generate a report on error analysis.">
+        <xslt in="${report.findbugs.dir}/findbugs.xml"
+              style="${findbugs.home.dir}/src/xsl/fancy.xsl"
+              out="${report.findbugs.dir}/findbugs-default.html"
+        />
+    </target>
+
+    <!-- -->
+    <target name="report.checkstyle" 
+        description="Generate a report of code convention violations.">
+        <taskdef resource="checkstyletask.properties"
+                 classpath="${checkstyle.home.dir}\checkstyle-5.9-all.jar"
+        />
+
+        <!-- run verification of installation-->
+        <available file="${checkstyle.home.dir}\checkstyle-5.9-all.jar"
+                   property="checkstyle.available"
+        />
+        <fail unless="checkstyle.available"
+              message="Error: CHECKSTYLE_HOME not set or checkstyle-5.9-all.jar not found."
+        />
+        <mkdir dir="${report.checkstyle.dir}" />
+
+        <!-- run analysis-->
+        <checkstyle config="${basedir}/checkstyle_rules.xml"
+                    failureProperty="checkstyle.failure"
+                    failOnViolation="false"
+        >
+            <formatter type="xml" tofile="${report.checkstyle.dir}/checkstyle_report.xml" />
+            <fileset dir="${src.dir}" includes="**/*.java" />
+        </checkstyle>
+
+        <xslt in="${report.checkstyle.dir}/checkstyle_report.xml"
+              out="${report.checkstyle.dir}/checkstyle_report.html"
+              style="${checkstyle.home.dir}/checkstyle-noframes-sorted.xsl"
+        />
+    </target>
+
+    <!-- -->
+    <target name="clean.temp" description="Delete all temporary files and folders.">
+        <delete dir="${instrumented.dir}" />
+        <delete dir="${report.temp.dir}" />
+    </target>
+
+    <!-- -->
+    <target name="run"
+            description="Run the build"
+            depends="clean, 
+                prepare.report.dir, 
+                report.checkstyle, 
+                report.pmd, 
+                report.cpd,
+                junit,
+                report.junit,
+                compile,   
+                findbugs, 
+                report.findbugs, 
+                clean.temp"
+    >
+    </target>
+
+</project>

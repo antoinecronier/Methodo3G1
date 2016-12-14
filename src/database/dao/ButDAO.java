@@ -1,5 +1,6 @@
 package database.dao;
 
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,30 +10,34 @@ import java.util.List;
 
 import database.DatabaseAccess;
 import database.IGenericDAO;
-import entite.Attribut;
+import entite.But;
 
-public class AttributDAO implements IGenericDAO<Attribut> {
 
-	public final static String ID = "id_attribut";
-	public final static String NAME = "name_attribut";
-	public final static String TABLE = "Attribut";
-
+public class ButDAO implements IGenericDAO<But> {
+	public final static String ID = "id_but";
+	public final static String ATTIME = "atTime";
+	public final static String IDMATCH = "id_match";
+	public final static String IDJOUEUR = "id_joueur";
+	public final static String TABLE = "But";
+	
 	@Override
-	public ArrayList<Attribut> SelectAll() {
-		List<Attribut> attributs = new LinkedList<Attribut>();
+	public ArrayList<But> SelectAll() {
+		List<But> buts = new LinkedList<But>();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
 					+ DatabaseAccess.DB + "."+TABLE+" ;");
 
-			Attribut attribut = null;
+			But but = null;
 			while (resultSet.next()) {
-				attribut = new Attribut();
-				attribut.setId_attribut(Integer.parseInt(resultSet
+				but = new But();
+				but.setId_but(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName_attribut(resultSet.getString(NAME));
-				attributs.add(attribut);
+				but.setAtTime(resultSet.getTime(ATTIME));
+				but.setId_match(Integer.parseInt(IDMATCH));
+				but.setId_joueur(Integer.parseInt(IDJOUEUR));
+				buts.add(but);
 			}
 			resultSet.close();
 			statement.close();
@@ -40,13 +45,13 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		ArrayList<Attribut> returnAttributs = new ArrayList<Attribut>(attributs);
-		return returnAttributs;
+		ArrayList<But> returnButs = new ArrayList<But>(buts);
+		return returnButs;
 	}
 
 	@Override
-	public Attribut Select(Integer id) {
-		Attribut attribut = new Attribut();
+	public But Select(Integer id) {
+		But but = new But();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
@@ -55,9 +60,11 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 					+ id + ";");
 
 			if (resultSet.next() != false) {
-				attribut.setId_attribut(Integer.parseInt(resultSet
+				but.setId_but(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName_attribut(resultSet.getString(NAME));
+				but.setAtTime(resultSet.getTime(ATTIME));
+				but.setId_match(Integer.parseInt(IDMATCH));
+				but.setId_joueur(Integer.parseInt(IDJOUEUR));
 				resultSet.close();
 			}
 
@@ -68,7 +75,7 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			e.printStackTrace();
 		}
 
-		return attribut;
+		return but;
 	}
 
 	@Override
@@ -101,14 +108,16 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 	}
 
 	@Override
-	public void Update(Attribut item) {
+	public void Update(But item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+NAME+" = '"+ item.getName_attribut() + "'"
-					+" WHERE "+TABLE+"."+ID+" = " + item.getId_attribut()
+					+" "+ATTIME+" = '"+ item.getAtTime() + "',"
+					+" "+IDMATCH+" = '"+ item.getId_match() + "',"
+					+" "+IDJOUEUR+" = '"+ item.getId_joueur() + "'"
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_but()
 					+";");
 
 			statement.close();
@@ -118,14 +127,17 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 	}
 
 	@Override
-	public void Insert(Attribut item) {
+	public void Insert(But item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("INSERT INTO "
-					+ DatabaseAccess.DB + "."+TABLE+" ("+NAME+") VALUES "
-					+"('" + item.getName_attribut() + "')"+
-					";");
+					+ DatabaseAccess.DB + "."+TABLE+" ("+ATTIME+", "+IDMATCH+", "+IDJOUEUR+") VALUES "
+					+" "+ATTIME+" = '"+ item.getAtTime() + "',"
+					+" "+IDMATCH+" = '"+ item.getId_match() + "',"
+					+" "+IDJOUEUR+" = '"+ item.getId_joueur() + "'"
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_but()
+					+	";");
 
 			statement.close();
 		} catch (SQLException e) {
@@ -133,3 +145,4 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		}
 	}
 }
+

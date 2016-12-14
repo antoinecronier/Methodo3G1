@@ -9,30 +9,30 @@ import java.util.List;
 
 import database.DatabaseAccess;
 import database.IGenericDAO;
-import entite.Attribut;
+import entite.Match;
 
-public class AttributDAO implements IGenericDAO<Attribut> {
+public class MatchDAO implements IGenericDAO<Match> {
 
-	public final static String ID = "id_attribut";
-	public final static String NAME = "name_attribut";
-	public final static String TABLE = "Attribut";
+	public final static String ID = "match_id";
+	public final static String NAME = "name";
+	public final static String TABLE = "Saison";
 
 	@Override
-	public ArrayList<Attribut> SelectAll() {
-		List<Attribut> attributs = new LinkedList<Attribut>();
+	public ArrayList<Match> SelectAll() {
+		List<Match> matchs = new LinkedList<Match>();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
 					+ DatabaseAccess.DB + "."+TABLE+" ;");
 
-			Attribut attribut = null;
+			Match match = null;
 			while (resultSet.next()) {
-				attribut = new Attribut();
-				attribut.setId_attribut(Integer.parseInt(resultSet
+				match = new Match();
+				match.setMatch_id(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName_attribut(resultSet.getString(NAME));
-				attributs.add(attribut);
+				match.setName(resultSet.getString(NAME));
+				matchs.add(match);
 			}
 			resultSet.close();
 			statement.close();
@@ -40,13 +40,13 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		ArrayList<Attribut> returnAttributs = new ArrayList<Attribut>(attributs);
-		return returnAttributs;
+		ArrayList<Match> returnMatchs = new ArrayList<Match>(matchs);
+		return returnMatchs;
 	}
 
 	@Override
-	public Attribut Select(Integer id) {
-		Attribut attribut = new Attribut();
+	public Match Select(Integer id) {
+		Match match = new Match();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
@@ -55,9 +55,9 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 					+ id + ";");
 
 			if (resultSet.next() != false) {
-				attribut.setId_attribut(Integer.parseInt(resultSet
+				match.setMatch_id(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName_attribut(resultSet.getString(NAME));
+				match.setName(resultSet.getString(NAME));
 				resultSet.close();
 			}
 
@@ -68,7 +68,7 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			e.printStackTrace();
 		}
 
-		return attribut;
+		return match;
 	}
 
 	@Override
@@ -101,14 +101,14 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 	}
 
 	@Override
-	public void Update(Attribut item) {
+	public void Update(Match item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+NAME+" = '"+ item.getName_attribut() + "'"
-					+" WHERE "+TABLE+"."+ID+" = " + item.getId_attribut()
+					+" "+NAME+" = '"+ item.getName() + "'"
+					+" WHERE "+TABLE+"."+ID+" = " + item.getMatch_id()
 					+";");
 
 			statement.close();
@@ -118,13 +118,13 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 	}
 
 	@Override
-	public void Insert(Attribut item) {
+	public void Insert(Match item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("INSERT INTO "
 					+ DatabaseAccess.DB + "."+TABLE+" ("+NAME+") VALUES "
-					+"('" + item.getName_attribut() + "')"+
+					+"('" + item.getName() + "')"+
 					";");
 
 			statement.close();

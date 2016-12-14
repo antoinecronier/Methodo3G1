@@ -9,30 +9,34 @@ import java.util.List;
 
 import database.DatabaseAccess;
 import database.IGenericDAO;
-import entite.Attribut;
+import entite.Selection;
 
-public class AttributDAO implements IGenericDAO<Attribut> {
+public class SelectionDAO implements IGenericDAO<Selection> {
 
-	public final static String ID = "id_attribut";
-	public final static String NAME = "name_attribut";
-	public final static String TABLE = "Attribut";
+	public final static String ID = "id_selection";
+	public final static String IDMATCH = "id_match";
+	public final static String IDCLUB = "id_club";
+	public final static String TABLE = "Selection";
 
 	@Override
-	public ArrayList<Attribut> SelectAll() {
-		List<Attribut> attributs = new LinkedList<Attribut>();
+	public ArrayList<Selection> SelectAll() {
+		List<Selection> selections = new LinkedList<Selection>();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			ResultSet resultSet = statement.executeQuery("SELECT * FROM "
 					+ DatabaseAccess.DB + "."+TABLE+" ;");
 
-			Attribut attribut = null;
+			Selection selection = null;
 			while (resultSet.next()) {
-				attribut = new Attribut();
-				attribut.setId_attribut(Integer.parseInt(resultSet
+				selection = new Selection();
+				selection.setId_selection(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName_attribut(resultSet.getString(NAME));
-				attributs.add(attribut);
+				selection.setId_match(Integer.parseInt(resultSet
+						.getString(IDMATCH)));
+				selection.setId_club(Integer.parseInt(resultSet
+						.getString(IDCLUB)));
+				selections.add(selection);
 			}
 			resultSet.close();
 			statement.close();
@@ -40,13 +44,13 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		ArrayList<Attribut> returnAttributs = new ArrayList<Attribut>(attributs);
-		return returnAttributs;
+		ArrayList<Selection> returnSelections = new ArrayList<Selection>(selections);
+		return returnSelections;
 	}
 
 	@Override
-	public Attribut Select(Integer id) {
-		Attribut attribut = new Attribut();
+	public Selection Select(Integer id) {
+		Selection selection = new Selection();
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
@@ -55,9 +59,12 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 					+ id + ";");
 
 			if (resultSet.next() != false) {
-				attribut.setId_attribut(Integer.parseInt(resultSet
+				selection.setId_selection(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName_attribut(resultSet.getString(NAME));
+				selection.setId_match(Integer.parseInt(resultSet
+						.getString(IDMATCH)));
+				selection.setId_club(Integer.parseInt(resultSet
+						.getString(IDCLUB)));
 				resultSet.close();
 			}
 
@@ -68,7 +75,7 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			e.printStackTrace();
 		}
 
-		return attribut;
+		return selection;
 	}
 
 	@Override
@@ -101,14 +108,15 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 	}
 
 	@Override
-	public void Update(Attribut item) {
+	public void Update(Selection item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+NAME+" = '"+ item.getName_attribut() + "'"
-					+" WHERE "+TABLE+"."+ID+" = " + item.getId_attribut()
+					+" "+IDMATCH+" = '"+ item.getId_match() + "',"
+					+" "+IDMATCH+" = '"+ item.getId_club() + "'"
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_selection()
 					+";");
 
 			statement.close();
@@ -118,18 +126,17 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 	}
 
 	@Override
-	public void Insert(Attribut item) {
+	public void Insert(Selection item) {
 		try {
 			Statement statement = DatabaseAccess.getConnection()
 					.createStatement();
 			statement.execute("INSERT INTO "
-					+ DatabaseAccess.DB + "."+TABLE+" ("+NAME+") VALUES "
-					+"('" + item.getName_attribut() + "')"+
-					";");
+					+ DatabaseAccess.DB + "."+TABLE+" ("+IDMATCH+","+IDCLUB+") VALUES "
+					+"('" + item.getId_match() + "','" + item.getId_club() + "';");
 
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
+	} 
 }
