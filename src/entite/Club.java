@@ -2,13 +2,22 @@ package entite;
 
 import java.util.ArrayList;
 
-import database.IGenericDAO;
+import database.GenericDAO;
 
-public class Club {
+public class Club implements GenericDAO<Club> {
 
 	private Integer club_id;
 	private String name;
 	private Integer money;
+	private Integer totalPoints;
+
+	public Integer getTotalPoints() {
+		return totalPoints;
+	}
+
+	public void setTotalPoints(Integer totalPoints) {
+		this.totalPoints = totalPoints;
+	}
 
 	public Club(Integer club_id, String name, Integer money) {
 		this.club_id = club_id;
@@ -39,4 +48,41 @@ public class Club {
 	public void setMoney(Integer money) {
 		this.money = money;
 	}
+
+	@Override
+	public Club SelectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Club> Select(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void DeleteAll() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void Delete(Integer id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void Update(Club item) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Club Insert(Club item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
