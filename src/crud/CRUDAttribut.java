@@ -15,10 +15,6 @@ import java.awt.Color;
 import java.awt.List;
 import java.util.ArrayList;
 
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-
 import database.dao.AttributDAO;
 import entite.Attribut;
 
@@ -67,36 +63,36 @@ public class CRUDAttribut {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 474);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		txtAttributs = new JTextField();
 		txtAttributs.setHorizontalAlignment(SwingConstants.CENTER);
 		txtAttributs.setText("ATTRIBUTS");
 		txtAttributs.setColumns(10);
-		
+
 		JButton btnNewButton = new JButton("Supprime");
-		
+
 		AttributDAO attDAO = new AttributDAO();
-		
+
 		JList<Attribut> list = new JList(attDAO.SelectAll().toArray());
-		
+
 		JScrollBar scrollBar = new JScrollBar();
-		
+
 		JButton btnNewButton_1 = new JButton("OK");
-		
+
 		JTextPane txtpnModifierAttribut = new JTextPane();
 		txtpnModifierAttribut.setText("Modifier Attribut:");
-		
+
 		JTextPane txtpnAjouterJoueur = new JTextPane();
 		txtpnAjouterJoueur.setText("Ajouter Attribut:");
-		
+
 		JButton btnNewButton_2 = new JButton("OK");
-		
+
 		textField = new JTextField();
 		textField.setColumns(10);
-		
+
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		
+
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
