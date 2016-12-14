@@ -1,24 +1,21 @@
-package Game_Page_JAVA;
+package views;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 
-public class Game_Page_JAVA {
+public class GamePage {
 
 	private JFrame frmBallsManager;
 	private JTextField txtMonClub;
@@ -32,7 +29,7 @@ public class Game_Page_JAVA {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Game_Page_JAVA window = new Game_Page_JAVA();
+					GamePage window = new GamePage();
 					window.frmBallsManager.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +41,7 @@ public class Game_Page_JAVA {
 	/**
 	 * Create the application.
 	 */
-	public Game_Page_JAVA() {
+	public GamePage() {
 		initialize();
 	}
 
@@ -58,16 +55,7 @@ public class Game_Page_JAVA {
 		frmBallsManager.setBounds(100, 100, 910, 786);
 		frmBallsManager.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmBallsManager.getContentPane().setLayout(null);
-		
-		
-		JPanel Icnpanel = new JPanel();
-		Icnpanel.setBorder(null);
-		Icnpanel.setBounds(10, 11, 350, 175);
-	    ImageIcon pic = new ImageIcon("C:\\Users\\Yannick\\Eclipse\\Game_Page_JAVA\\src\\Images\\ball_manager.png");
-	    Icnpanel.add(new JLabel(pic));
-	    this.add(Icnpanel);
 	    this.setVisible(true);
-		frmBallsManager.getContentPane().add(Icnpanel);
 		
 		txtMonClub = new JTextField();
 		txtMonClub.setHorizontalAlignment(SwingConstants.CENTER);
@@ -75,7 +63,7 @@ public class Game_Page_JAVA {
 		txtMonClub.setFont(new Font("Rockwell Condensed", Font.BOLD, 99));
 		txtMonClub.setText("Mon Club");
 		txtMonClub.setEditable(false);
-		txtMonClub.setBounds(366, 42, 518, 124);
+		txtMonClub.setBounds(10, 30, 874, 124);
 		frmBallsManager.getContentPane().add(txtMonClub);
 		txtMonClub.setColumns(10);
 		
@@ -132,8 +120,4 @@ public class Game_Page_JAVA {
 		
 	}
 
-	private void add(JPanel icnpanel) {
-		// TODO Auto-generated method stub
-		
-	}
 }
