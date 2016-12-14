@@ -33,7 +33,7 @@ public class JoueurDAO implements IGenericDAO<Joueur> {
 			Joueur joueur1 = null;
 			while (resultSet.next()) {
 				joueur1 = new Joueur();
-				joueur1.setJoueur_id(Integer.parseInt(resultSet
+				joueur1.setId_joueur(Integer.parseInt(resultSet
 						.getString(ID)));
 				joueur1.setLastname_joueur(resultSet.getString(LASTNAME));
 				joueur1.setFirstname_joueur(resultSet.getString(FIRSTNAME));
@@ -63,7 +63,7 @@ public class JoueurDAO implements IGenericDAO<Joueur> {
 
 			resultSet.next();
 
-			joueur.setJoueur_id(Integer.parseInt(resultSet
+			joueur.setId_joueur(Integer.parseInt(resultSet
 					.getString(ID)));
 			joueur.setLastname_joueur(resultSet.getString(LASTNAME));
 			joueur.setFirstname_joueur(resultSet.getString(FIRSTNAME));
@@ -119,22 +119,22 @@ public class JoueurDAO implements IGenericDAO<Joueur> {
 			ResultSet resultSet1 = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
 					+" "+LASTNAME+" = "+ item.getLastname_joueur() + ""
-					+" WHERE "+TABLE+"."+ID+" = " + item.getJoueur_id()
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_joueur()
 					+";");
 			ResultSet resultSet2 = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
 					+" "+FIRSTNAME+" = "+ item.getFirstname_joueur() + ""
-					+" WHERE "+TABLE+"."+ID+" = " + item.getJoueur_id()
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_joueur()
 					+";");
 			ResultSet resultSet3 = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
 					+" "+SURNAME+" = "+ item.getSurname_joueur() + ""
-					+" WHERE "+TABLE+"."+ID+" = " + item.getJoueur_id()
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_joueur()
 					+";");
 			ResultSet resultSet4 = statement.executeQuery("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
 					+" "+PRICE+" = "+ item.getPrice() + ""
-					+" WHERE "+TABLE+"."+ID+" = " + item.getJoueur_id()
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_joueur()
 					+";");
 			resultSet1.close();
 			resultSet2.close();
