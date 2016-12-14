@@ -1,97 +1,49 @@
 package entite;
 
-import java.util.ArrayList;
-
-import database.IGenericDAO;
-
 public class Entraineur {
 
-	private Integer entraineur_id;
-	private String firstname;
-	private String lastname;
-<<<<<<< HEAD
-	private Integer club_id;
+	private Integer id_entraineur;
+	private String firstname_entraineur;
+	private String lastname_entraineur;
+	private Integer id_club;
 
-	public Entraineur(Integer entraineur_id, String firstname, String lastname, Integer club_id) {
-=======
-
-	public Entraineur(Integer entraineur_id, String firstname, String lastname) {
->>>>>>> origin
-		this.entraineur_id = entraineur_id;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.club_id = club_id;
+	public Entraineur(Integer id_entraineur, String firstname_entraineur, String lastname_entraineur, Integer id_club) {
+		this.id_entraineur = id_entraineur;
+		this.firstname_entraineur = firstname_entraineur;
+		this.lastname_entraineur = lastname_entraineur;
+		this.id_club = id_club;
 	}
 
-	public Integer getEntraineur_id() {
-		return entraineur_id;
+	public Integer getId_entraineur() {
+		return id_entraineur;
 	}
 
-	public void setEntraineur_id(Integer entraineur_id) {
-		this.entraineur_id = entraineur_id;
+	public void setId_entraineur(Integer id_entraineur) {
+		this.id_entraineur = id_entraineur;
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String getFirstname_entraineur() {
+		return firstname_entraineur;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstname_entraineur(String firstname_entraineur) {
+		this.firstname_entraineur = firstname_entraineur;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getLastname_entraineur() {
+		return lastname_entraineur;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-<<<<<<< HEAD
-
-	public Integer getClub_id() {
-		return club_id;
+	public void setLastname_entraineur(String lastname_entraineur) {
+		this.lastname_entraineur = lastname_entraineur;
 	}
 
-	public void setClub_id(Integer club_id) {
-		this.club_id = club_id;
+	public Integer getId_club() {
+		return id_club;
 	}
 
-	@Override
-	public Entraineur SelectAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public void setId_club(Integer id_club) {
+		this.id_club = id_club;
 	}
-
-	@Override
-	public ArrayList<Entraineur> Select(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void DeleteAll() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Delete(Integer id) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void Update(Entraineur item) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Entraineur Insert(Entraineur item) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-=======
->>>>>>> origin
+	
 }
