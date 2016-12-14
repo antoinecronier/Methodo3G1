@@ -1,8 +1,7 @@
 package home_screen;
 
-import javax.swing.*;
+
 import java.awt.*;
-import java.awt.event.*;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
@@ -10,13 +9,11 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Home_Screen {
+public class HomeScreen {
 
 	private JFrame frame;
-	private final JToggleButton tglbtnNewToggleButton = new JToggleButton("New toggle button");
 	private JTextField txtBallsManager;
 	private JTextField textField;
 
@@ -27,7 +24,7 @@ public class Home_Screen {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Home_Screen window = new Home_Screen();
+					HomeScreen window = new HomeScreen();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +36,7 @@ public class Home_Screen {
 	/**
 	 * Create the application.
 	 */
-	public Home_Screen() {
+	public HomeScreen() {
 		initialize();
 	}
 
@@ -65,7 +62,7 @@ public class Home_Screen {
 		btnNewButton_1.setBounds(319, 408, 175, 115);
 		frame.getContentPane().add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("GIVE UP");
+		JButton btnNewButton_2 = new JButton("QUIT");
 		btnNewButton_2.setFont(new Font("Rockwell Condensed", Font.BOLD, 35));
 		btnNewButton_2.setBounds(553, 574, 189, 101);
 		frame.getContentPane().add(btnNewButton_2);
