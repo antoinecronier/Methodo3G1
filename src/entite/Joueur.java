@@ -70,11 +70,11 @@ public class Joueur {
 		this.club_id = club_id;
 	}
 
-	public ArrayList<Attribut> getAttributs() {
+	public ArrayList<Attribut> getAttribut() {
 		return attribut;
 	}
 
-	public void setAttribut(ArrayList<Attribut> attributs) {
+	public void setAttribut(ArrayList<Attribut> attribut) {
 		this.attribut = attribut;
 	}
 
@@ -112,14 +112,6 @@ public class Joueur {
 	public Joueur Insert(Joueur item) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	public ArrayList<Attribut> getAttribut() {
-		return attribut;
-	}
-
-	public void setAttribut(ArrayList<Attribut> attribut) {
-		this.attribut = attribut;
 	}
 	
 }

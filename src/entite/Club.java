@@ -82,9 +82,5 @@ public class Club {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	public void setJoueur(ArrayList<Joueur> joueur) {
-		this.joueur = joueur;
-	}
 	
 }
