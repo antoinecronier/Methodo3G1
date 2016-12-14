@@ -51,5 +51,4 @@ public class Club {
 	public void setJoueur(ArrayList<Joueur> joueur) {
 		this.joueur = joueur;
 	}
-	
 }

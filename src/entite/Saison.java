@@ -14,6 +14,10 @@ public class Saison {
 
 	}
 
+	public Saison() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getSaison_id() {
 		return saison_id;
 	}
