@@ -29,9 +29,9 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 			Attribut attribut = null;
 			while (resultSet.next()) {
 				attribut = new Attribut();
-				attribut.setAttribut_id(Integer.parseInt(resultSet
+				attribut.setId_attribut(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName(resultSet.getString(NAME));
+				attribut.setName_attribut(resultSet.getString(NAME));
 				attributs.add(attribut);
 			}
 			resultSet.close();
@@ -55,9 +55,9 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 					+ id + ";");
 
 			if (resultSet.next() != false) {
-				attribut.setAttribut_id(Integer.parseInt(resultSet
+				attribut.setId_attribut(Integer.parseInt(resultSet
 						.getString(ID)));
-				attribut.setName(resultSet.getString(NAME));
+				attribut.setName_attribut(resultSet.getString(NAME));
 				resultSet.close();
 			}
 
@@ -107,8 +107,8 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 					.createStatement();
 			statement.execute("UPDATE "
 					+ DatabaseAccess.DB + "."+TABLE+" SET "
-					+" "+NAME+" = '"+ item.getName() + "'"
-					+" WHERE "+TABLE+"."+ID+" = " + item.getAttribut_id()
+					+" "+NAME+" = '"+ item.getName_attribut() + "'"
+					+" WHERE "+TABLE+"."+ID+" = " + item.getId_attribut()
 					+";");
 
 			statement.close();
@@ -124,7 +124,7 @@ public class AttributDAO implements IGenericDAO<Attribut> {
 					.createStatement();
 			statement.execute("INSERT INTO "
 					+ DatabaseAccess.DB + "."+TABLE+" ("+NAME+") VALUES "
-					+"('" + item.getName() + "')"+
+					+"('" + item.getName_attribut() + "')"+
 					";");
 
 			statement.close();

@@ -3,7 +3,7 @@ package matchManager;
 public class Training {
 	
 	
-	public trainingChoice(int choice){
+	/*public trainingChoice(int choice){
 		int trainingChoice = 0;
 			switch(trainingChoice){
 			
@@ -50,5 +50,5 @@ public class Training {
 		entite.Attribut.vitesse += 3;
 		entite.Attribut.fatigue -= 3;
 	}
-	
+	*/
 }
