@@ -35,8 +35,8 @@ public class ButDAO implements IGenericDAO<But> {
 				but.setId_but(Integer.parseInt(resultSet
 						.getString(ID)));
 				but.setAtTime(resultSet.getTime(ATTIME));
-				but.setId_match(Integer.parseInt(IDMATCH));
-				but.setId_joueur(Integer.parseInt(IDJOUEUR));
+				but.setId_match(Integer.parseInt(resultSet.getString(IDMATCH)));
+				but.setId_joueur(Integer.parseInt(resultSet.getString(IDJOUEUR)));
 				buts.add(but);
 			}
 			resultSet.close();
@@ -63,8 +63,8 @@ public class ButDAO implements IGenericDAO<But> {
 				but.setId_but(Integer.parseInt(resultSet
 						.getString(ID)));
 				but.setAtTime(resultSet.getTime(ATTIME));
-				but.setId_match(Integer.parseInt(IDMATCH));
-				but.setId_joueur(Integer.parseInt(IDJOUEUR));
+				but.setId_match(Integer.parseInt(resultSet.getString(IDMATCH)));
+				but.setId_joueur(Integer.parseInt(resultSet.getString(IDJOUEUR)));
 				resultSet.close();
 			}
 
