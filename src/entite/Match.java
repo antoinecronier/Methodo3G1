@@ -14,6 +14,10 @@ public class Match {
 
 	}
 
+	public Match() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getMatch_id() {
 		return match_id;
 	}
