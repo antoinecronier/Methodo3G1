@@ -1,5 +1,7 @@
 package entite;
 
+import database.IGenericDAO;
+
 public class Entraineur {
 
 	private Integer id_entraineur;
