@@ -1,7 +1,6 @@
 package entite;
 
 import java.util.ArrayList;
-import database.IGenericDAO;
 
 public class Joueur {
 	private Integer id_joueur;
