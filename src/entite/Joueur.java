@@ -114,4 +114,12 @@ public class Joueur {
 		return null;
 	}
 
+	public ArrayList<Attribut> getAttribut() {
+		return attribut;
+	}
+
+	public void setAttribut(ArrayList<Attribut> attribut) {
+		this.attribut = attribut;
+	}
+	
 }

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.7">
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\Game_Page_JAVA\Game_Page_JAVA.java">
+<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="1" column="9" severity="error" message="Le nom &apos;Game_Page_JAVA&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="21" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="21" column="1" severity="error" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="21" column="14" severity="error" message="Le nom &apos;Game_Page_JAVA&apos; n&apos;est pas conforme à l&apos;expression &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
+<error line="23" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="24" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="25" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="26" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="31" column="38" severity="error" message="Balise javadoc @param manquante pour &apos;args&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="48" column="9" severity="error" message="L&apos;appel à la méthode &apos;initialize&apos; nécessite l&apos;utilisation de  &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="55" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="56" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="56" column="93" severity="error" message="&apos;20&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="57" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="58" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="58" column="35" severity="error" message="&apos;100&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="58" column="40" severity="error" message="&apos;100&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="58" column="45" severity="error" message="&apos;910&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="58" column="50" severity="error" message="&apos;786&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="59" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="60" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="63" column="16" severity="error" message="Le nom &apos;Icnpanel&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
+<error line="65" column="28" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="32" severity="error" message="&apos;11&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="36" severity="error" message="&apos;350&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="41" severity="error" message="&apos;175&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="70" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="72" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="73" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="74" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="75" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="75" column="70" severity="error" message="&apos;99&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="76" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="77" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="78" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="78" column="30" severity="error" message="&apos;366&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="78" column="35" severity="error" message="&apos;42&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="78" column="39" severity="error" message="&apos;518&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="78" column="44" severity="error" message="&apos;124&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="79" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="79" column="46" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="80" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMonClub&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="80" column="31" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="82" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="83" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="84" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="85" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="85" column="75" severity="error" message="&apos;50&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="86" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="87" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="87" column="34" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="38" severity="error" message="&apos;197&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="43" severity="error" message="&apos;432&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="48" severity="error" message="&apos;65&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="88" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="88" column="46" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="89" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtListJoueurs&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="89" column="35" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="91" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="92" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="92" column="69" severity="error" message="&apos;50&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="93" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="94" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="95" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="96" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="96" column="28" severity="error" message="&apos;452&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="96" column="33" severity="error" message="&apos;197&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="96" column="38" severity="error" message="&apos;432&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="96" column="43" severity="error" message="&apos;65&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="97" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="97" column="46" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="98" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtMatch&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="98" column="29" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="102" column="30" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="102" column="34" severity="error" message="&apos;285&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="102" column="39" severity="error" message="&apos;432&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="102" column="44" severity="error" message="&apos;309&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="103" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="106" column="76" severity="error" message="&apos;40&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="107" column="35" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="107" column="39" severity="error" message="&apos;619&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="107" column="44" severity="error" message="&apos;267&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="107" column="49" severity="error" message="&apos;107&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="108" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="115" column="69" severity="error" message="&apos;40&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="116" column="28" severity="error" message="&apos;317&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="116" column="33" severity="error" message="&apos;619&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="116" column="38" severity="error" message="&apos;267&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="116" column="43" severity="error" message="&apos;107&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="117" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="120" column="74" severity="error" message="&apos;40&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="121" column="33" severity="error" message="&apos;617&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="121" column="38" severity="error" message="&apos;619&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="121" column="43" severity="error" message="&apos;267&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="121" column="48" severity="error" message="&apos;107&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="122" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="126" column="28" severity="error" message="&apos;452&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="126" column="33" severity="error" message="&apos;285&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="126" column="38" severity="error" message="&apos;432&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="126" column="43" severity="error" message="&apos;309&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="127" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frmBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="130" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="135" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\database\DatabaseAccess.java">
+<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="7" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="7" column="1" severity="error" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="8" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="9" column="18" severity="error" message="Le mot-clef &apos;static&apos; n&apos;apparaît pas dans l&apos;ordre préconisé par les JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="11" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="14" severity="error" message="L&apos;instruction &apos;if&apos; devrait utiliser des accolades  (&apos;{&apos; et &apos;}&apos;)." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="16" column="65" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="16" column="66" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="16" column="68" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="16" column="69" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="30" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="35" column="31" severity="error" message="Le bloc devrait contenir au moins une instruction." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\database\IGenericDAO.java">
+<error line="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="6" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="6" column="5" severity="error" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="6" column="25" severity="error" message="Le nom &apos;SelectAll&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="7" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="7" column="5" severity="error" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="7" column="14" severity="error" message="Le nom &apos;Select&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="8" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="8" column="5" severity="error" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="8" column="17" severity="error" message="Le nom &apos;DeleteAll&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="9" column="5" severity="error" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="9" column="17" severity="error" message="Le nom &apos;Delete&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="10" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="10" column="5" severity="error" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="10" column="17" severity="error" message="Le nom &apos;Update&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="11" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="11" column="5" severity="error" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="11" column="17" severity="error" message="Le nom &apos;Insert&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\database\dao\AttributDAO.java">
+<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="14" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="16" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="16" column="18" severity="error" message="Le mot-clef &apos;static&apos; n&apos;apparaît pas dans l&apos;ordre préconisé par les JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="17" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="17" column="18" severity="error" message="Le mot-clef &apos;static&apos; n&apos;apparaît pas dans l&apos;ordre préconisé par les JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="18" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="18" column="18" severity="error" message="Le mot-clef &apos;static&apos; n&apos;apparaît pas dans l&apos;ordre préconisé par les JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="21" column="32" severity="error" message="Le nom &apos;SelectAll&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="27" column="46" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="27" column="47" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="27" column="52" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="27" column="53" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="48" column="21" severity="error" message="Le nom &apos;Select&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="54" column="46" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="54" column="47" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="54" column="52" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="54" column="53" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="74" column="17" severity="error" message="Le nom &apos;DeleteAll&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="79" column="46" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="79" column="47" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="79" column="52" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="79" column="53" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="89" column="17" severity="error" message="Le nom &apos;Delete&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="94" column="61" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="94" column="62" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="94" column="67" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="94" column="68" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="94" column="71" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="94" column="72" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="94" column="74" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="94" column="75" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="105" column="17" severity="error" message="Le nom &apos;Update&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="110" column="46" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="110" column="47" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="110" column="52" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="110" column="53" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="111" column="22" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="111" column="25" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="111" column="26" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="111" column="30" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="111" column="31" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="111" column="36" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="22" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="31" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="32" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="37" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="38" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="41" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="42" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="44" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="112" column="45" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="113" column="22" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="123" column="17" severity="error" message="Le nom &apos;Insert&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="128" column="46" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="128" column="47" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="128" column="52" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="128" column="53" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="129" column="22" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="129" column="53" severity="error" message="&apos;+&apos; devrait être sur une nouvelle ligne." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+<error line="129" column="53" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\entite\Attribut.java">
+<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="3" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="4" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="4" column="21" severity="error" message="Le nom &apos;attribut_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="5" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="6" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="8" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="8" column="29" severity="error" message="Le nom &apos;attribut_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="8" column="69" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="14" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="14" column="22" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="17" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="17" column="20" severity="error" message="Le nom &apos;getAttribut_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="18" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;attribut_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="21" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="21" column="17" severity="error" message="Le nom &apos;setAttribut_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="21" column="40" severity="error" message="Le nom &apos;attribut_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="25" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="26" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;name&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="29" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="33" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="34" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;value&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="37" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\entite\But.java">
+<error line="4" column="8" severity="error" message="Import inutilisé - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="6" column="8" severity="error" message="Import inutilisé - database.IGenericDAO." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="8" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="9" column="21" severity="error" message="Le nom &apos;but_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="10" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="12" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="12" column="24" severity="error" message="Le nom &apos;but_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="12" column="47" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="19" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="19" column="20" severity="error" message="Le nom &apos;getBut_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="20" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;but_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="23" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="23" column="17" severity="error" message="Le nom &apos;setBut_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="23" column="35" severity="error" message="Le nom &apos;but_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="27" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="28" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;butMarque&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="31" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\entite\Club.java">
+<error line="0" severity="error" message="Il manque un caractère NewLine à la fin du fichier" source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="5" column="8" severity="error" message="Import inutilisé - database.IGenericDAO." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="9" column="21" severity="error" message="Le nom &apos;club_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="10" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="12" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="13" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="13" column="21" severity="error" message="Le nom &apos;entraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="15" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="15" column="25" severity="error" message="Le nom &apos;club_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="15" column="96" severity="error" message="Le nom &apos;entraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="23" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="23" column="20" severity="error" message="Le nom &apos;getClub_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="24" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;club_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="27" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="27" column="17" severity="error" message="Le nom &apos;setClub_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="27" column="36" severity="error" message="Le nom &apos;club_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="31" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="32" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;name&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="35" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="39" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="40" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;money&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="43" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="47" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="48" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;joueur&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="51" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="55" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="55" column="20" severity="error" message="Le nom &apos;getEntraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="56" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;entraineur_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="59" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="59" column="17" severity="error" message="Le nom &apos;setEntraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="59" column="42" severity="error" message="Le nom &apos;entraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\entite\Entraineur.java">
+<error line="0" severity="error" message="Il manque un caractère NewLine à la fin du fichier" source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="3" column="8" severity="error" message="Import inutilisé - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="error" message="Import inutilisé - database.IGenericDAO." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="9" column="21" severity="error" message="Le nom &apos;entraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="10" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="13" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="13" column="31" severity="error" message="Le nom &apos;entraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="19" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="19" column="20" severity="error" message="Le nom &apos;getEntraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="20" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;entraineur_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="23" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="23" column="17" severity="error" message="Le nom &apos;setEntraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="23" column="42" severity="error" message="Le nom &apos;entraineur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="27" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="28" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;firstname&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="31" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="35" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="36" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;lastname&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="39" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\entite\Joueur.java">
+<error line="0" severity="error" message="Il manque un caractère NewLine à la fin du fichier" source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="5" column="8" severity="error" message="Import inutilisé - database.IGenericDAO." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="9" column="21" severity="error" message="Le nom &apos;joueur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="10" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="12" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="13" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="14" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="14" column="21" severity="error" message="Le nom &apos;club_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="15" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="17" severity="error" message="La ligne excède 120 caractères." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="17" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="17" column="27" severity="error" message="Le nom &apos;joueur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="17" column="112" severity="error" message="Le nom &apos;club_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="17" column="150" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="27" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="27" column="20" severity="error" message="Le nom &apos;getJoueur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="28" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;joueur_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="31" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="31" column="17" severity="error" message="Le nom &apos;setJoueur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="31" column="38" severity="error" message="Le nom &apos;joueur_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="35" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="36" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;lastname&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="39" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="43" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="44" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;firstname&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="47" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="51" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="52" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;surname&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="55" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="59" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="60" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;price&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="63" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="67" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="67" column="20" severity="error" message="Le nom &apos;getClub_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="68" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;club_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="71" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="71" column="17" severity="error" message="Le nom &apos;setClub_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="71" column="36" severity="error" message="Le nom &apos;club_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="75" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="76" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;attribut&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="79" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\entite\Match.java">
+<error line="3" column="8" severity="error" message="Import inutilisé - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="error" message="Import inutilisé - database.IGenericDAO." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="8" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="8" column="21" severity="error" message="Le nom &apos;match_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="11" column="39" severity="error" message="Le nom &apos;match_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="11" column="48" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="17" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="17" column="20" severity="error" message="Le nom &apos;getMatch_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="18" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;match_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="21" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="21" column="17" severity="error" message="Le nom &apos;setMatch_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="21" column="37" severity="error" message="Le nom &apos;match_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="25" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="26" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;name&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="29" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\entite\Saison.java">
+<error line="3" column="8" severity="error" message="Import inutilisé - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="error" message="Import inutilisé - database.IGenericDAO." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="8" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="8" column="21" severity="error" message="Le nom &apos;saison_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="11" column="27" severity="error" message="Le nom &apos;saison_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="11" column="50" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="17" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="17" column="20" severity="error" message="Le nom &apos;getSaison_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="18" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;saison_id&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="21" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="21" column="17" severity="error" message="Le nom &apos;setSaison_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="21" column="38" severity="error" message="Le nom &apos;saison_id&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="25" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="26" column="16" severity="error" message="La référence à la variable d&apos;instance &apos;name&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="29" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\home_screen\Home_Screen.java">
+<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="1" column="9" severity="error" message="Le nom &apos;home_screen&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="3" severity="error" message="L&apos;utilisation des import.* est prohibé - javax.swing.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="4" severity="error" message="L&apos;utilisation des import.* est prohibé - java.awt.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="5" severity="error" message="L&apos;utilisation des import.* est prohibé - java.awt.event.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="13" column="8" severity="error" message="Import inutilisé - javax.swing.JPanel." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="16" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="16" column="1" severity="error" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="16" column="14" severity="error" message="Le nom &apos;Home_Screen&apos; n&apos;est pas conforme à l&apos;expression &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
+<error line="18" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="19" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="20" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="21" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="26" column="38" severity="error" message="Balise javadoc @param manquante pour &apos;args&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="43" column="9" severity="error" message="L&apos;appel à la méthode &apos;initialize&apos; nécessite l&apos;utilisation de  &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="52" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frame&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="55" column="72" severity="error" message="&apos;35&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="56" column="32" severity="error" message="&apos;87&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="56" column="36" severity="error" message="&apos;254&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="56" column="41" severity="error" message="&apos;189&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="56" column="46" severity="error" message="&apos;101&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="57" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frame&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="59" column="17" severity="error" message="Le nom &apos;btnNewButton_1&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
+<error line="60" column="74" severity="error" message="&apos;35&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="34" severity="error" message="&apos;319&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="39" severity="error" message="&apos;408&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="44" severity="error" message="&apos;175&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="49" severity="error" message="&apos;115&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="66" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frame&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="68" column="17" severity="error" message="Le nom &apos;btnNewButton_2&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
+<error line="69" column="74" severity="error" message="&apos;35&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="70" column="34" severity="error" message="&apos;553&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="70" column="39" severity="error" message="&apos;574&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="70" column="44" severity="error" message="&apos;189&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="70" column="49" severity="error" message="&apos;101&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="71" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frame&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="73" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="74" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="75" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="75" column="75" severity="error" message="&apos;60&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="76" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="77" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="78" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="78" column="35" severity="error" message="&apos;157&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="78" column="40" severity="error" message="&apos;41&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="78" column="44" severity="error" message="&apos;434&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="78" column="49" severity="error" message="&apos;60&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="79" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frame&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="79" column="36" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="80" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;txtBallsManager&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="80" column="36" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="82" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="83" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="84" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="85" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="85" column="58" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="85" column="102" severity="error" message="&apos;55&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="86" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="87" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="87" column="29" severity="error" message="&apos;611&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="34" severity="error" message="&apos;42&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="38" severity="error" message="&apos;110&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="43" severity="error" message="&apos;60&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="88" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;frame&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="88" column="36" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="89" column="9" severity="error" message="La référence à la variable d&apos;instance &apos;textField&apos; doit utiliser &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="89" column="30" severity="error" message="&apos;10&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\Mourad\workspace\Methodo3G1\src\management\Main.java">
+<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="6" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="6" column="1" severity="error" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="8" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+</checkstyle>

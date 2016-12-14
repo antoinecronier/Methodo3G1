@@ -3,14 +3,12 @@ package entite;
 import java.util.ArrayList;
 
 public class Club {
-	
 	private Integer club_id;
 	private String name;
 	private Integer money;
 	private ArrayList<Joueur> joueur;
 
 	public Club(Integer club_id, String name, Integer money, ArrayList<Joueur> joueur) {
-
 		this.club_id = club_id;
 		this.name = name;
 		this.money = money;
@@ -85,4 +83,8 @@ public class Club {
 		return null;
 	}
 
+	public void setJoueur(ArrayList<Joueur> joueur) {
+		this.joueur = joueur;
+	}
+	
 }
